@@ -9,3 +9,4 @@
 |6| Count Good Nodes in Binary Tree | https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/ | Medium | https://leetcode.com/problems/count-good-nodes-in-binary-tree/solutions/6639575/java-o-n-solution/ |
 |7| Validate Binary Search Tree | https://leetcode.com/problems/validate-binary-search-tree/description/ | Medium | https://leetcode.com/problems/validate-binary-search-tree/solutions/6639645/java-o-n-solution/ |
 |8| Kth Smallest Element in a BST | https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/ | Medium | https://leetcode.com/problems/kth-smallest-element-in-a-bst/solutions/6639683/java-o-n-solution/ |
+|9| Binary Tree Maximum Path Sum | https://leetcode.com/problems/binary-tree-maximum-path-sum/description/ | Hard | https://leetcode.com/problems/binary-tree-maximum-path-sum/solutions/6639732/java-o-n-solution/ |
