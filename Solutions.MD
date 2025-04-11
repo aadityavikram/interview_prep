@@ -8,3 +8,4 @@
 |5| Super Egg Drop | https://leetcode.com/problems/super-egg-drop/description/ | Hard | https://leetcode.com/problems/super-egg-drop/solutions/6637438/java-o-n-k-solution/ |
 |6| Count Good Nodes in Binary Tree | https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/ | Medium | https://leetcode.com/problems/count-good-nodes-in-binary-tree/solutions/6639575/java-o-n-solution/ |
 |7| Validate Binary Search Tree | https://leetcode.com/problems/validate-binary-search-tree/description/ | Medium | https://leetcode.com/problems/validate-binary-search-tree/solutions/6639645/java-o-n-solution/ |
+|8| Kth Smallest Element in a BST | https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/ | Medium | https://leetcode.com/problems/kth-smallest-element-in-a-bst/solutions/6639683/java-o-n-solution/ |
