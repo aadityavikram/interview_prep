@@ -15,3 +15,4 @@
 |12| Implement Trie (Prefix Tree) | https://leetcode.com/problems/implement-trie-prefix-tree/description/ | Medium | https://leetcode.com/problems/implement-trie-prefix-tree/solutions/6642726/java-o-n-solution/ |
 |13| Design Add and Search Words Data Structure | https://leetcode.com/problems/design-add-and-search-words-data-structure/description/ | Medium | https://leetcode.com/problems/design-add-and-search-words-data-structure/solutions/6642799/java-o-n-o-26-d-n-solution/ |
 |14| Word Search II | https://leetcode.com/problems/word-search-ii/description/ | Hard | https://leetcode.com/problems/word-search-ii/solutions/6642985/java-o-n-l-x-y-l-solution/ |
+|15| K Closest Points to Origin | https://leetcode.com/problems/k-closest-points-to-origin/description/ | Medium | https://leetcode.com/problems/k-closest-points-to-origin/solutions/6643179/java-o-n-log-k-solution/ |
