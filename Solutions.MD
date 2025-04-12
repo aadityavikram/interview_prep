@@ -13,3 +13,4 @@
 |10| Serialize and Deserialize Binary Tree | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/ | Hard | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/solutions/6639865/java-o-n-solution/ |
 |11| Find the Count of Good Integers | https://leetcode.com/problems/find-the-count-of-good-integers/description/ | Hard | https://leetcode.com/problems/find-the-count-of-good-integers/solutions/6642282/java-o-10-n-2-n-log-n-solution/ |
 |12| Implement Trie (Prefix Tree) | https://leetcode.com/problems/implement-trie-prefix-tree/description/ | Medium | https://leetcode.com/problems/implement-trie-prefix-tree/solutions/6642726/java-o-n-solution/ |
+|13| Design Add and Search Words Data Structure | https://leetcode.com/problems/design-add-and-search-words-data-structure/description/ | Medium | https://leetcode.com/problems/design-add-and-search-words-data-structure/solutions/6642799/java-o-n-o-26-d-n-solution/ |
