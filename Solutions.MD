@@ -18,3 +18,4 @@
 |15| K Closest Points to Origin | https://leetcode.com/problems/k-closest-points-to-origin/description/ | Medium | https://leetcode.com/problems/k-closest-points-to-origin/solutions/6643179/java-o-n-log-k-solution/ |
 |16| Kth Largest Element in an Array | https://leetcode.com/problems/kth-largest-element-in-an-array/description/ | Medium | https://leetcode.com/problems/kth-largest-element-in-an-array/solutions/6643234/java-o-n-solution/ |
 |17| Number of Unique XOR Triplets I | https://leetcode.com/problems/number-of-unique-xor-triplets-i/description/ | Medium | https://leetcode.com/problems/number-of-unique-xor-triplets-i/solutions/6643614/java-o-log-n-solution/ |
+|18| Task Scheduler | https://leetcode.com/problems/task-scheduler/description/ | Medium | https://leetcode.com/problems/task-scheduler/solutions/6644139/java-o-n-solution/ |
