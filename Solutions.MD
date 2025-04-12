@@ -11,3 +11,4 @@
 |8| Kth Smallest Element in a BST | https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/ | Medium | https://leetcode.com/problems/kth-smallest-element-in-a-bst/solutions/6639683/java-o-n-solution/ |
 |9| Binary Tree Maximum Path Sum | https://leetcode.com/problems/binary-tree-maximum-path-sum/description/ | Hard | https://leetcode.com/problems/binary-tree-maximum-path-sum/solutions/6639732/java-o-n-solution/ |
 |10| Serialize and Deserialize Binary Tree | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/ | Hard | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/solutions/6639865/java-o-n-solution/ |
+|11| Find the Count of Good Integers | https://leetcode.com/problems/find-the-count-of-good-integers/description/ | Hard | https://leetcode.com/problems/find-the-count-of-good-integers/solutions/6642282/java-o-10-n-2-n-log-n-solution/ |
