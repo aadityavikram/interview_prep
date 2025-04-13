@@ -20,3 +20,4 @@
 |17| Number of Unique XOR Triplets I | https://leetcode.com/problems/number-of-unique-xor-triplets-i/description/ | Medium | https://leetcode.com/problems/number-of-unique-xor-triplets-i/solutions/6643614/java-o-log-n-solution/ |
 |18| Task Scheduler | https://leetcode.com/problems/task-scheduler/description/ | Medium | https://leetcode.com/problems/task-scheduler/solutions/6644139/java-o-n-solution/ |
 |19| Count Good Numbers | https://leetcode.com/problems/count-good-numbers/description/ | Medium | https://leetcode.com/problems/count-good-numbers/solutions/6645160/java-o-log-n-solution/ |
+|20| Median of Two Sorted Arrays | https://leetcode.com/problems/median-of-two-sorted-arrays/description/ | Hard | https://leetcode.com/problems/median-of-two-sorted-arrays/solutions/6645588/java-o-log-min-m-n-solution/ |
