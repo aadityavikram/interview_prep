@@ -19,3 +19,4 @@
 |16| Kth Largest Element in an Array | https://leetcode.com/problems/kth-largest-element-in-an-array/description/ | Medium | https://leetcode.com/problems/kth-largest-element-in-an-array/solutions/6643234/java-o-n-solution/ |
 |17| Number of Unique XOR Triplets I | https://leetcode.com/problems/number-of-unique-xor-triplets-i/description/ | Medium | https://leetcode.com/problems/number-of-unique-xor-triplets-i/solutions/6643614/java-o-log-n-solution/ |
 |18| Task Scheduler | https://leetcode.com/problems/task-scheduler/description/ | Medium | https://leetcode.com/problems/task-scheduler/solutions/6644139/java-o-n-solution/ |
+|19| Count Good Numbers | https://leetcode.com/problems/count-good-numbers/description/ | Medium | https://leetcode.com/problems/count-good-numbers/solutions/6645160/java-o-log-n-solution/ |
