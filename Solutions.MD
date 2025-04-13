@@ -23,3 +23,4 @@
 |20| Median of Two Sorted Arrays | https://leetcode.com/problems/median-of-two-sorted-arrays/description/ | Hard | https://leetcode.com/problems/median-of-two-sorted-arrays/solutions/6645588/java-o-log-min-m-n-solution/ |
 |21| House Robber | https://leetcode.com/problems/house-robber/description/ | Medium | https://leetcode.com/problems/house-robber/solutions/6646084/java-o-n-solution/ |
 |22| House Robber II | https://leetcode.com/problems/house-robber-ii/description/ | Medium | https://leetcode.com/problems/house-robber-ii/solutions/6646179/java-o-n-solution/ |
+|23| Unique Paths | https://leetcode.com/problems/unique-paths/ | Medium | https://leetcode.com/problems/unique-paths/solutions/6648107/java-o-m-n-solution/ |
