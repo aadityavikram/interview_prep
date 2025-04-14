@@ -26,3 +26,4 @@
 |23| Unique Paths | https://leetcode.com/problems/unique-paths/ | Medium | https://leetcode.com/problems/unique-paths/solutions/6648107/java-o-n-m-solution/ |
 |24| Unique Paths II | https://leetcode.com/problems/unique-paths-ii/description/ | Medium | https://leetcode.com/problems/unique-paths-ii/solutions/6648167/java-o-n-m-solution/ |
 |25| Unique Paths III | https://leetcode.com/problems/unique-paths-iii/ | Hard | https://leetcode.com/problems/unique-paths-iii/solutions/6648203/java-o-4-n-solution/ |
+|26| Design Twitter | https://leetcode.com/problems/design-twitter/description/ | Medium | https://leetcode.com/problems/design-twitter/solutions/6648302/java-n-log-n-solution/ |
