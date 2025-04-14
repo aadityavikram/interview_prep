@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|33| Minimum Path Sum | https://leetcode.com/problems/minimum-path-sum/description/ | Medium | https://leetcode.com/problems/minimum-path-sum/solutions/6649972/java-o-n-m-solution/ |
 |32| Permutations II | https://leetcode.com/problems/permutations-ii/description/ | Medium | https://leetcode.com/problems/permutations-ii/solutions/6648558/java-o-n-n-solution/ |
 |31| Permutations | https://leetcode.com/problems/permutations/description/ | Medium | https://leetcode.com/problems/permutations/solutions/6648446/java-o-n-n-solution/ |
 |30| Combination Sum II | https://leetcode.com/problems/combination-sum-ii/description/ | Medium | https://leetcode.com/problems/combination-sum-ii/solutions/6648427/java-o-n-2-n-solution/ |
