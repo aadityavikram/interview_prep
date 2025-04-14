@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|28| Subsets | https://leetcode.com/problems/subsets/description/ | Medium | https://leetcode.com/problems/subsets/solutions/6648354/java-o-n-2-n-solution/ |
 |27| Find Median from Data Stream | https://leetcode.com/problems/find-median-from-data-stream/description/ | Hard | https://leetcode.com/problems/find-median-from-data-stream/solutions/6648323/java-o-log-n-solution/
 |26| Design Twitter | https://leetcode.com/problems/design-twitter/description/ | Medium | https://leetcode.com/problems/design-twitter/solutions/6648302/java-n-log-n-solution/ |
 |25| Unique Paths III | https://leetcode.com/problems/unique-paths-iii/ | Hard | https://leetcode.com/problems/unique-paths-iii/solutions/6648203/java-o-4-n-solution/ |
