@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|36| Subsets II | https://leetcode.com/problems/subsets-ii/description/ | Medium | https://leetcode.com/problems/subsets-ii/solutions/6650632/java-o-n-2-n-solution/ |
 |35| Minimum Falling Path Sum II | https://leetcode.com/problems/minimum-falling-path-sum-ii/description/ | Hard | https://leetcode.com/problems/minimum-falling-path-sum-ii/solutions/6650433/java-o-n-m-solution/ |
 |34| Minimum Falling Path Sum | https://leetcode.com/problems/minimum-falling-path-sum/description/ | Medium | https://leetcode.com/problems/minimum-falling-path-sum/solutions/6650161/java-o-n-m-solution/ |
 |33| Minimum Path Sum | https://leetcode.com/problems/minimum-path-sum/description/ | Medium | https://leetcode.com/problems/minimum-path-sum/solutions/6649972/java-o-n-m-solution/ |
