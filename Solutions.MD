@@ -24,3 +24,4 @@
 |21| House Robber | https://leetcode.com/problems/house-robber/description/ | Medium | https://leetcode.com/problems/house-robber/solutions/6646084/java-o-n-solution/ |
 |22| House Robber II | https://leetcode.com/problems/house-robber-ii/description/ | Medium | https://leetcode.com/problems/house-robber-ii/solutions/6646179/java-o-n-solution/ |
 |23| Unique Paths | https://leetcode.com/problems/unique-paths/ | Medium | https://leetcode.com/problems/unique-paths/solutions/6648107/java-o-m-n-solution/ |
+|24| Unique Paths II | https://leetcode.com/problems/unique-paths-ii/description/ | Medium | https://leetcode.com/problems/unique-paths-ii/solutions/6648167/java-o-n-m-solution/ |
