@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|41| Letter Combinations of a Phone Number | https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/ | Medium | https://leetcode.com/problems/letter-combinations-of-a-phone-number/solutions/6652774/java-o-n-4-n-solution/ |
 |40| Palindrome Partitioning | https://leetcode.com/problems/palindrome-partitioning/description/ | Medium | https://leetcode.com/problems/palindrome-partitioning/solutions/6652709/java-o-n-2-n-solution/ |
 |39| Word Search | https://leetcode.com/problems/word-search/description/ | Medium | https://leetcode.com/problems/word-search/solutions/6652214/java-o-n-m-3-l-solution/ |
 |38| Count Good Triplets in an Array | https://leetcode.com/problems/count-good-triplets-in-an-array/description/ | Hard | https://leetcode.com/problems/count-good-triplets-in-an-array/solutions/6652057/java-o-n-2-solution/ |
