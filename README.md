@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|39| Word Search | https://leetcode.com/problems/word-search/description/ | Medium | https://leetcode.com/problems/word-search/solutions/6652214/java-o-n-m-3-l-solution/ |
 |38| Count Good Triplets in an Array | https://leetcode.com/problems/count-good-triplets-in-an-array/description/ | Hard | https://leetcode.com/problems/count-good-triplets-in-an-array/solutions/6652057/java-o-n-2-solution/ |
 |37| Partition Equal Subset Sum | https://leetcode.com/problems/partition-equal-subset-sum/description/ | Medium | https://leetcode.com/problems/partition-equal-subset-sum/solutions/6651741/java-o-n-s-solution/ |
 |36| Subsets II | https://leetcode.com/problems/subsets-ii/description/ | Medium | https://leetcode.com/problems/subsets-ii/solutions/6650632/java-o-n-2-n-solution/ |
