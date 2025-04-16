@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|50| Two Sum II - Input Array Is Sorted | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/ | Medium | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/solutions/6655375/java-o-n-solution/ |
 |49| Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence/description/ | Medium | https://leetcode.com/problems/longest-consecutive-sequence/solutions/6655349/java-o-n-solution/ |
 |48| Valid Sudoku | https://leetcode.com/problems/valid-sudoku/description/ | Medium | https://leetcode.com/problems/valid-sudoku/solutions/6655308/java-o-1-solution/ |
 |47| Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self/description/ | Medium | https://leetcode.com/problems/product-of-array-except-self/solutions/6655258/java-o-n-solution/ |
