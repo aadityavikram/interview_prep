@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|48| Valid Sudoku | https://leetcode.com/problems/valid-sudoku/description/ | Medium | https://leetcode.com/problems/valid-sudoku/solutions/6655308/java-o-1-solution/ |
 |47| Product of Array Except Self | https://leetcode.com/problems/product-of-array-except-self/description/ | Medium | https://leetcode.com/problems/product-of-array-except-self/solutions/6655258/java-o-n-solution/ |
 |46| Top K Frequent Elements | https://leetcode.com/problems/top-k-frequent-elements/description/ | Medium | https://leetcode.com/problems/top-k-frequent-elements/solutions/6655178/java-o-n-solution/ |
 |45| Count the Number of Good Subarrays | https://leetcode.com/problems/count-the-number-of-good-subarrays/description/ | Medium | https://leetcode.com/problems/count-the-number-of-good-subarrays/solutions/6655087/java-o-n-solution/ |
