@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|45| Count the Number of Good Subarrays | https://leetcode.com/problems/count-the-number-of-good-subarrays/description/ | Medium | https://leetcode.com/problems/count-the-number-of-good-subarrays/solutions/6655087/java-o-n-solution/ |
 |44| Count of Smaller Numbers After Self | https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/ | Hard | https://leetcode.com/problems/count-of-smaller-numbers-after-self/solutions/6653754/java-o-n-log-n-solution/ |
 |43| Group Anagrams | https://leetcode.com/problems/group-anagrams/description/ | Medium | https://leetcode.com/problems/group-anagrams/solutions/6653401/java-o-n-k-solution/ |
 |42| N-Queens | https://leetcode.com/problems/n-queens/description/ | Hard | https://leetcode.com/problems/n-queens/solutions/6652951/java-o-n-solution/ |
