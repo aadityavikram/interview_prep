@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|56| Longest Repeating Character Replacement | https://leetcode.com/problems/longest-repeating-character-replacement/description/ | Medium | https://leetcode.com/problems/longest-repeating-character-replacement/solutions/6659105/java-o-n-solution/ |
 |55| Longest Substring Without Repeating Characters | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | Medium | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ |
 |54| Trapping Rain Water | https://leetcode.com/problems/trapping-rain-water/description/ | Hard | https://leetcode.com/problems/trapping-rain-water/solutions/6658931/java-o-n-solution/ |
 |53| Container With Most Water | https://leetcode.com/problems/container-with-most-water/description/ | Medium | https://leetcode.com/problems/container-with-most-water/solutions/6658864/java-o-n-solution/ |
