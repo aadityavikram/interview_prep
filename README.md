@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|58| Minimum Window Substring | https://leetcode.com/problems/minimum-window-substring/description/ | Hard | https://leetcode.com/problems/minimum-window-substring/solutions/6659358/java-o-n-m-solution/ |
 |57| Permutation in String | https://leetcode.com/problems/permutation-in-string/description/ | Medium | https://leetcode.com/problems/permutation-in-string/solutions/6659229/java-o-n-m-solution/ |
 |56| Longest Repeating Character Replacement | https://leetcode.com/problems/longest-repeating-character-replacement/description/ | Medium | https://leetcode.com/problems/longest-repeating-character-replacement/solutions/6659105/java-o-n-solution/ |
 |55| Longest Substring Without Repeating Characters | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | Medium | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ |
