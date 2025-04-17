@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|55| Longest Substring Without Repeating Characters | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ | Medium | https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ |
 |54| Trapping Rain Water | https://leetcode.com/problems/trapping-rain-water/description/ | Hard | https://leetcode.com/problems/trapping-rain-water/solutions/6658931/java-o-n-solution/ |
 |53| Container With Most Water | https://leetcode.com/problems/container-with-most-water/description/ | Medium | https://leetcode.com/problems/container-with-most-water/solutions/6658864/java-o-n-solution/ |
 |52| Count Array Pairs Divisible by K | https://leetcode.com/problems/count-array-pairs-divisible-by-k/description/ | Hard | https://leetcode.com/problems/count-array-pairs-divisible-by-k/solutions/6658794/java-o-n-2-solution/ |
