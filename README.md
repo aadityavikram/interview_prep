@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|52| Count Array Pairs Divisible by K | https://leetcode.com/problems/count-array-pairs-divisible-by-k/description/ | Hard | https://leetcode.com/problems/count-array-pairs-divisible-by-k/solutions/6658794/java-o-n-2-solution/ |
 |51| 3Sum | https://leetcode.com/problems/3sum/description/ | Medium | https://leetcode.com/problems/3sum/solutions/6655401/java-o-n-2-solution/ |
 |50| Two Sum II - Input Array Is Sorted | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/ | Medium | https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/solutions/6655375/java-o-n-solution/ |
 |49| Longest Consecutive Sequence | https://leetcode.com/problems/longest-consecutive-sequence/description/ | Medium | https://leetcode.com/problems/longest-consecutive-sequence/solutions/6655349/java-o-n-solution/ |
