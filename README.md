@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|65| Daily Temperatures | https://leetcode.com/problems/daily-temperatures/description/ | Medium | https://leetcode.com/problems/daily-temperatures/description/ |
 |64| Generate Parentheses | https://leetcode.com/problems/generate-parentheses/description/ | Medium | https://leetcode.com/problems/generate-parentheses/solutions/6663654/java-o-cn-n-solution/ |
 |63| Evaluate Reverse Polish Notation | https://leetcode.com/problems/evaluate-reverse-polish-notation/description/ | Medium | https://leetcode.com/problems/evaluate-reverse-polish-notation/solutions/6663558/java-o-n-solution/ |
 |62| Min Stack | https://leetcode.com/problems/min-stack/description/ | Medium | https://leetcode.com/problems/min-stack/solutions/6663502/java-o-1-solution/ |
