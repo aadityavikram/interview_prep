@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|72| Koko Eating Bananas | https://leetcode.com/problems/koko-eating-bananas/description/ | Medium | https://leetcode.com/problems/koko-eating-bananas/solutions/6669145/java-o-n-log-m-solution/ |
 |71| Search a 2D Matrix | https://leetcode.com/problems/search-a-2d-matrix/ | Medium | https://leetcode.com/problems/search-a-2d-matrix/solutions/6669004/java-o-log-n-m-solution/ |
 |70| Rabbits in Forest | https://leetcode.com/problems/rabbits-in-forest/description/ | Medium | https://leetcode.com/problems/rabbits-in-forest/solutions/6668423/java-o-n-solution/ |
 |69| Group the People Given the Group Size They Belong To | https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/ | Medium | https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/solutions/6668343/java-o-n-solution/ |
