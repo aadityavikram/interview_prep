@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|75| Time Based Key-Value Store | https://leetcode.com/problems/time-based-key-value-store/description/ | Medium | https://leetcode.com/problems/time-based-key-value-store/solutions/6669371/java-o-log-m-solution/ |
 |74| Search in Rotated Sorted Array | https://leetcode.com/problems/search-in-rotated-sorted-array/description/ | Medium | https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/6669259/java-log-n-solution/ |
 |73| Find Minimum in Rotated Sorted Array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/ | Medium | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/6669198/java-o-log-n-solution/ |
 |72| Koko Eating Bananas | https://leetcode.com/problems/koko-eating-bananas/description/ | Medium | https://leetcode.com/problems/koko-eating-bananas/solutions/6669145/java-o-n-log-m-solution/ |
