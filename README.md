@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|74| Search in Rotated Sorted Array | https://leetcode.com/problems/search-in-rotated-sorted-array/description/ | Medium | https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/6669259/java-log-n-solution/ |
 |73| Find Minimum in Rotated Sorted Array | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/ | Medium | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/6669198/java-o-log-n-solution/ |
 |72| Koko Eating Bananas | https://leetcode.com/problems/koko-eating-bananas/description/ | Medium | https://leetcode.com/problems/koko-eating-bananas/solutions/6669145/java-o-n-log-m-solution/ |
 |71| Search a 2D Matrix | https://leetcode.com/problems/search-a-2d-matrix/ | Medium | https://leetcode.com/problems/search-a-2d-matrix/solutions/6669004/java-o-log-n-m-solution/ |
