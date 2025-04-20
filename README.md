@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|70| Rabbits in Forest | https://leetcode.com/problems/rabbits-in-forest/description/ | Medium | https://leetcode.com/problems/rabbits-in-forest/solutions/6668423/java-o-n-solution/ |
 |69| Group the People Given the Group Size They Belong To | https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/ | Medium | https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/solutions/6668343/java-o-n-solution/ |
 |68| Largest Rectangle in Histogram | https://leetcode.com/problems/largest-rectangle-in-histogram/ | Hard | https://leetcode.com/problems/largest-rectangle-in-histogram/solutions/6668295/java-o-n-solution/ |
 |67| Count the Number of Fair Pairs | https://leetcode.com/problems/count-the-number-of-fair-pairs/description/ | Medium | https://leetcode.com/problems/count-the-number-of-fair-pairs/solutions/6666095/java-o-n-log-n-solution/ |
