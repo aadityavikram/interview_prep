@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|82| Copy List with Random Pointer | https://leetcode.com/problems/copy-list-with-random-pointer/description/ | Medium | https://leetcode.com/problems/copy-list-with-random-pointer/solutions/6672777/java-o-n-solution/ |
 |81| Remove Nth Node From End of List | https://leetcode.com/problems/remove-nth-node-from-end-of-list/ | Medium | https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/6672698/java-o-n-solution/ |
 |80| Reorder List | https://leetcode.com/problems/reorder-list/description/ | Medium | https://leetcode.com/problems/reorder-list/description/ |
 |79| Cut Off Trees for Golf Event | https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ | Hard | https://leetcode.com/problems/cut-off-trees-for-golf-event/solutions/6672645/java-o-n-m-k-solution/ |
