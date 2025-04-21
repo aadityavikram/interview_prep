@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|78| Maximum Value of an Ordered Triplet II | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/description/ | Medium | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/solutions/6672569/java-o-n-solution/ |
 |77| Count the Hidden Sequences | https://leetcode.com/problems/count-the-hidden-sequences/description/ | Medium | https://leetcode.com/problems/count-the-hidden-sequences/solutions/6672530/java-o-n-solution/ |
 |76| Maximal Rectangle | https://leetcode.com/problems/maximal-rectangle/description/ | Hard | https://leetcode.com/problems/maximal-rectangle/solutions/6669552/java-o-n-m-solution/ |
 |75| Time Based Key-Value Store | https://leetcode.com/problems/time-based-key-value-store/description/ | Medium | https://leetcode.com/problems/time-based-key-value-store/solutions/6669371/java-o-log-m-solution/ |
