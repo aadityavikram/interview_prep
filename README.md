@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|81| Remove Nth Node From End of List | https://leetcode.com/problems/remove-nth-node-from-end-of-list/ | Medium | https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/6672698/java-o-n-solution/ |
 |80| Reorder List | https://leetcode.com/problems/reorder-list/description/ | Medium | https://leetcode.com/problems/reorder-list/description/ |
 |79| Cut Off Trees for Golf Event | https://leetcode.com/problems/cut-off-trees-for-golf-event/description/ | Hard | https://leetcode.com/problems/cut-off-trees-for-golf-event/solutions/6672645/java-o-n-m-k-solution/ |
 |78| Maximum Value of an Ordered Triplet II | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/description/ | Medium | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/solutions/6672569/java-o-n-solution/ |
