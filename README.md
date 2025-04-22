@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|85| Find the Duplicate Number | https://leetcode.com/problems/find-the-duplicate-number/description/ | Medium | https://leetcode.com/problems/find-the-duplicate-number/solutions/6676461/java-o-n-solution/ |
 |84| Count the Number of Ideal Arrays | https://leetcode.com/problems/count-the-number-of-ideal-arrays/description/ | Hard  | https://leetcode.com/problems/count-the-number-of-ideal-arrays/solutions/6676126/java-o-maxvalue-log-maxvalue-solution/ |
 |83| Add Two Numbers | https://leetcode.com/problems/add-two-numbers/description/ | Medium | https://leetcode.com/problems/add-two-numbers/solutions/6672808/java-o-n-solution/ |
 |82| Copy List with Random Pointer | https://leetcode.com/problems/copy-list-with-random-pointer/description/ | Medium | https://leetcode.com/problems/copy-list-with-random-pointer/solutions/6672777/java-o-n-solution/ |
