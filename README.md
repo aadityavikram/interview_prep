@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|90| Maximum Score Words Formed by Letters | https://leetcode.com/problems/maximum-score-words-formed-by-letters/description/ | Hard | https://leetcode.com/problems/maximum-score-words-formed-by-letters/solutions/6676984/java-o-l-2-n-solution/ |
 |89| Merge Nodes in Between Zeros | https://leetcode.com/problems/merge-nodes-in-between-zeros/description/ | Medium | https://leetcode.com/problems/merge-nodes-in-between-zeros/solutions/6676902/java-o-n-solution/ |
 |88| Reverse Nodes in k-Group | https://leetcode.com/problems/reverse-nodes-in-k-group/description/ | Hard | https://leetcode.com/problems/reverse-nodes-in-k-group/solutions/6676822/java-o-n-solution/ |
 |87| Merge k Sorted Lists | https://leetcode.com/problems/merge-k-sorted-lists/ | Hard | https://leetcode.com/problems/merge-k-sorted-lists/solutions/6676685/java-o-n-log-k-solution/ |
