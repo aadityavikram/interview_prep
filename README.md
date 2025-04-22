@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|88| Reverse Nodes in k-Group | https://leetcode.com/problems/reverse-nodes-in-k-group/description/ | Hard | https://leetcode.com/problems/reverse-nodes-in-k-group/solutions/6676822/java-o-n-solution/ |
 |87| Merge k Sorted Lists | https://leetcode.com/problems/merge-k-sorted-lists/ | Hard | https://leetcode.com/problems/merge-k-sorted-lists/solutions/6676685/java-o-n-log-k-solution/ |
 |86| LRU Cache | https://leetcode.com/problems/lru-cache/description/ | Medium | https://leetcode.com/problems/lru-cache/solutions/6676520/java-o-1-solution/ |
 |85| Find the Duplicate Number | https://leetcode.com/problems/find-the-duplicate-number/description/ | Medium | https://leetcode.com/problems/find-the-duplicate-number/solutions/6676461/java-o-n-solution/ |
