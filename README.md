@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|96| Distinct Subsequences | https://leetcode.com/problems/distinct-subsequences/description/ | Hard | https://leetcode.com/problems/distinct-subsequences/solutions/6680736/java-o-n-m-solution/ |
 |95| Critical Connections in a Network | https://leetcode.com/problems/critical-connections-in-a-network/description/ | Medium | https://leetcode.com/problems/critical-connections-in-a-network/solutions/6630555/java-o-v-e-solution/ |
 |94| Largest Divisible Subset | https://leetcode.com/problems/largest-divisible-subset/description/ | Medium | https://leetcode.com/problems/largest-divisible-subset/solutions/6621262/java-o-n-2-solution/ |
 |93| Count Primes | https://leetcode.com/problems/count-primes/description/ | Medium | https://leetcode.com/problems/count-primes/solutions/6680142/java-o-n-log-log-n-solution/ |
