@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|93| Count Primes | https://leetcode.com/problems/count-primes/description/ | Medium | https://leetcode.com/problems/count-primes/solutions/6680142/java-o-n-log-log-n-solution/ |
 |92| Solving Questions With Brainpower | https://leetcode.com/problems/solving-questions-with-brainpower/description/ | Medium | https://leetcode.com/problems/solving-questions-with-brainpower/solutions/6680098/java-o-n-solution/ |
 |91| Lowest Common Ancestor of Deepest Leaves | https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/description/ | Medium | https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/solutions/6679925/java-o-n-solution/ |
 |90| Maximum Score Words Formed by Letters | https://leetcode.com/problems/maximum-score-words-formed-by-letters/description/ | Hard | https://leetcode.com/problems/maximum-score-words-formed-by-letters/solutions/6676984/java-o-l-2-n-solution/ |
