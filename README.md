@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|94| Largest Divisible Subset | https://leetcode.com/problems/largest-divisible-subset/description/ | Medium | https://leetcode.com/problems/largest-divisible-subset/solutions/6621262/java-o-n-2-solution/ |
 |93| Count Primes | https://leetcode.com/problems/count-primes/description/ | Medium | https://leetcode.com/problems/count-primes/solutions/6680142/java-o-n-log-log-n-solution/ |
 |92| Solving Questions With Brainpower | https://leetcode.com/problems/solving-questions-with-brainpower/description/ | Medium | https://leetcode.com/problems/solving-questions-with-brainpower/solutions/6680098/java-o-n-solution/ |
 |91| Lowest Common Ancestor of Deepest Leaves | https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/description/ | Medium | https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/solutions/6679925/java-o-n-solution/ |
