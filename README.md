@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|103| Longest Palindromic Substring | https://leetcode.com/problems/longest-palindromic-substring/description/ | Medium | https://leetcode.com/problems/longest-palindromic-substring/solutions/6684124/java-o-n-2-solution/ |
 |102| Clone Graph | https://leetcode.com/problems/clone-graph/description/ | Medium | https://leetcode.com/problems/clone-graph/solutions/6683602/java-o-v-e-solution/ |
 |101| Max Area of Island | https://leetcode.com/problems/max-area-of-island/description/ | Medium | https://leetcode.com/problems/max-area-of-island/solutions/6683540/java-o-n-m-solution/ |
 |100| Number of Islands | https://leetcode.com/problems/number-of-islands/description/ | Medium | https://leetcode.com/problems/number-of-islands/solutions/6683376/java-o-n-m-solution/ |
