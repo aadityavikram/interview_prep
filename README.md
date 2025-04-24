@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|99| Count Complete Subarrays in an Array | https://leetcode.com/problems/count-complete-subarrays-in-an-array/description/ | Medium | https://leetcode.com/problems/count-complete-subarrays-in-an-array/solutions/6683311/java-o-n-solution/ |
 |98| Wildcard Matching | https://leetcode.com/problems/wildcard-matching/description/ | Hard | https://leetcode.com/problems/wildcard-matching/solutions/6681246/java-o-n-m-solution/ |
 |97| Edit Distance | https://leetcode.com/problems/edit-distance/description/ | Medium | https://leetcode.com/problems/edit-distance/solutions/6680958/java-o-n-m-solution/ |
 |96| Distinct Subsequences | https://leetcode.com/problems/distinct-subsequences/description/ | Hard | https://leetcode.com/problems/distinct-subsequences/solutions/6680736/java-o-n-m-solution/ |
