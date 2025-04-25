@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|106| Subarray Sum Equals K | https://leetcode.com/problems/subarray-sum-equals-k/description/ | Medium | https://leetcode.com/problems/subarray-sum-equals-k/solutions/6685325/java-o-n-solution/ |
 |105| Contiguous Array | https://leetcode.com/problems/contiguous-array/description/ | Medium | https://leetcode.com/problems/contiguous-array/solutions/6685230/java-o-n-solution/ |
 |104| Palindromic Substrings | https://leetcode.com/problems/palindromic-substrings/description/ | Medium | https://leetcode.com/problems/palindromic-substrings/solutions/6684222/java-o-n-2-solution/ |
 |103| Longest Palindromic Substring | https://leetcode.com/problems/longest-palindromic-substring/description/ | Medium | https://leetcode.com/problems/longest-palindromic-substring/solutions/6684124/java-o-n-2-solution/ |
