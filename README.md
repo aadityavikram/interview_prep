@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|116| Course Schedule | https://leetcode.com/problems/course-schedule/description/ | Medium | https://leetcode.com/problems/course-schedule/solutions/6617752/java-o-v-e-solution/ |
 |115| Surrounded Regions | https://leetcode.com/problems/surrounded-regions/description/ | Medium | https://leetcode.com/problems/surrounded-regions/solutions/6685934/java-o-n-m-solution/ |
 |114| Pacific Atlantic Water Flow | https://leetcode.com/problems/pacific-atlantic-water-flow/description/ | Medium | https://leetcode.com/problems/pacific-atlantic-water-flow/solutions/6685890/java-o-n-m-solution/ |
 |113| Rotting Oranges | https://leetcode.com/problems/rotting-oranges/description/ | Medium | https://leetcode.com/problems/rotting-oranges/description/ |
