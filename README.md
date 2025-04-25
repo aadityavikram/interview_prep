@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|113| Rotting Oranges | https://leetcode.com/problems/rotting-oranges/description/ | Medium | https://leetcode.com/problems/rotting-oranges/description/ |
 |112| Count of Interesting Subarrays | https://leetcode.com/problems/count-of-interesting-subarrays/description/ | Medium | https://leetcode.com/problems/count-of-interesting-subarrays/solutions/6685718/java-o-n-solution/ |
 |111| Count Subarrays Where Max Element Appears at Least K Times | https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/ | Medium | https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/solutions/6685585/java-o-n-solution/ |
 |110| Subarray Product Less Than K | https://leetcode.com/problems/subarray-product-less-than-k/description/ | Medium | https://leetcode.com/problems/subarray-product-less-than-k/solutions/6685540/java-o-n-solution/ |
