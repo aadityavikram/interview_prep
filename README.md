@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|111| Count Subarrays Where Max Element Appears at Least K Times | https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/ | Medium | https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/solutions/6685585/java-o-n-solution/ |
 |110| Subarray Product Less Than K | https://leetcode.com/problems/subarray-product-less-than-k/description/ | Medium | https://leetcode.com/problems/subarray-product-less-than-k/solutions/6685540/java-o-n-solution/ |
 |109| Count Number of Nice Subarrays | https://leetcode.com/problems/count-number-of-nice-subarrays/description/ | Medium | https://leetcode.com/problems/count-number-of-nice-subarrays/solutions/6685491/java-o-n-solution/ |
 |108| Binary Subarrays With Sum | https://leetcode.com/problems/binary-subarrays-with-sum/description/ | Medium | https://leetcode.com/problems/binary-subarrays-with-sum/solutions/6685478/java-o-n-solution/ |
