@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|120| Word Ladder | https://leetcode.com/problems/word-ladder/description/ | Hard | https://leetcode.com/problems/word-ladder/solutions/6688428/java-o-n-l-2-solution/ |
 |119| Redundant Connection | https://leetcode.com/problems/redundant-connection/description/ | Medium | https://leetcode.com/problems/redundant-connection/solutions/6688359/java-o-e-solution/ |
 |118| Count Subarrays With Fixed Bounds | https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/ | Hard | https://leetcode.com/problems/count-subarrays-with-fixed-bounds/solutions/6687902/java-o-n-solution/ |
 |117| Course Schedule II | https://leetcode.com/problems/course-schedule-ii/description/ | Medium | https://leetcode.com/problems/course-schedule-ii/solutions/6617790/java-o-v-e-solution/ |
