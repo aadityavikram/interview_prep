@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|118| Count Subarrays With Fixed Bounds | https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/ | Hard | https://leetcode.com/problems/count-subarrays-with-fixed-bounds/solutions/6687902/java-o-n-solution/ |
 |117| Course Schedule II | https://leetcode.com/problems/course-schedule-ii/description/ | Medium | https://leetcode.com/problems/course-schedule-ii/solutions/6617790/java-o-v-e-solution/ |
 |116| Course Schedule | https://leetcode.com/problems/course-schedule/description/ | Medium | https://leetcode.com/problems/course-schedule/solutions/6617752/java-o-v-e-solution/ |
 |115| Surrounded Regions | https://leetcode.com/problems/surrounded-regions/description/ | Medium | https://leetcode.com/problems/surrounded-regions/solutions/6685934/java-o-n-m-solution/ |
