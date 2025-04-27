@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|129| Construct Binary Tree from Preorder and Inorder Traversal | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/ | Medium | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solutions/6693478/java-o-n-solution/ |
 |128| Longest String Chain | https://leetcode.com/problems/longest-string-chain/description/ | Medium | https://leetcode.com/problems/longest-string-chain/solutions/6693393/java-o-n-l-solution/ |
 |127| Longest Increasing Subsequence | https://leetcode.com/problems/longest-increasing-subsequence/description/ | Medium | https://leetcode.com/problems/longest-increasing-subsequence/solutions/6691861/java-o-n-log-n-solution/ |
 |126| Find First and Last Position of Element in Sorted Array | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/ | Medium | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solutions/6691543/java-o-log-n-solution/ |
