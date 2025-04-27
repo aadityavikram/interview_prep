@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|125| Best Time to Buy and Sell Stock with Transaction Fee | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/ | Medium | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/6691205/java-o-n-solution/ |
 |124| Best Time to Buy and Sell Stock with Cooldown | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/ | Medium | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solutions/6689730/java-o-n-solution/ |
 |123| Best Time to Buy and Sell Stock IV | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/ | Hard | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/solutions/6689092/java-o-n-k-solution/ |
 |122| Best Time to Buy and Sell Stock III | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/ | Hard | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/solutions/6689036/java-o-n-solution/ |
