@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|132| Decode Ways | https://leetcode.com/problems/decode-ways/description/ | Medium | https://leetcode.com/problems/decode-ways/solutions/6696151/java-o-n-solution/ |
 |131| Number of Longest Increasing Subsequence | https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/ | Medium | https://leetcode.com/problems/number-of-longest-increasing-subsequence/solutions/6695673/java-o-n-2-solution/ |
 |130| Count Subarrays With Score Less Than K | https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/ | Hard | https://leetcode.com/problems/count-subarrays-with-score-less-than-k/solutions/6694168/java-o-n-solution/ |
 |129| Construct Binary Tree from Preorder and Inorder Traversal | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/ | Medium | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solutions/6693478/java-o-n-solution/ |
