@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|134| Maximum Product Subarray | https://leetcode.com/problems/maximum-product-subarray/description/ | Medium | https://leetcode.com/problems/maximum-product-subarray/solutions/6696538/java-o-n-solution/ |
 |133| Coin Change | https://leetcode.com/problems/coin-change/description/ | Medium | https://leetcode.com/problems/coin-change/solutions/6696334/java-o-n-m-solution/ |
 |132| Decode Ways | https://leetcode.com/problems/decode-ways/description/ | Medium | https://leetcode.com/problems/decode-ways/solutions/6696151/java-o-n-solution/ |
 |131| Number of Longest Increasing Subsequence | https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/ | Medium | https://leetcode.com/problems/number-of-longest-increasing-subsequence/solutions/6695673/java-o-n-2-solution/ |
