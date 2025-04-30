@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|140| Minimum Cost to Cut a Stick | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/ | Hard | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/solutions/6702099/java-o-n-3-solution/ |
 |139| Longest Increasing Path in a Matrix | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/ | Hard | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/solutions/6699763/java-o-n-m-solution/ |
 |138| Target Sum | https://leetcode.com/problems/target-sum/description/ | Medium | https://leetcode.com/problems/target-sum/solutions/6699495/java-o-n-t-solution/ |
 |137| Coin Change II | https://leetcode.com/problems/coin-change-ii/description/ | Medium | https://leetcode.com/problems/coin-change-ii/solutions/6698630/java-o-n-a-solution/ |
