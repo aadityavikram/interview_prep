@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|143| Burst Balloons | https://leetcode.com/problems/burst-balloons/description/ | Hard | https://leetcode.com/problems/burst-balloons/solutions/6706223/java-o-n-3-solution/ |
 |142| Maximum Number of Tasks You Can Assign | https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign/description/ | Hard | https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign/solutions/6704285/java-o-n-log-n-solution/ |
 |141| Decoded String at Index | https://leetcode.com/problems/decoded-string-at-index/description/ | Medium | https://leetcode.com/problems/decoded-string-at-index/solutions/6703309/java-o-n-solution/ |
 |140| Minimum Cost to Cut a Stick | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/ | Hard | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/solutions/6702099/java-o-n-3-solution/ |
