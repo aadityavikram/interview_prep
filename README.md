@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|148| Count Square Submatrices with All Ones | https://leetcode.com/problems/count-square-submatrices-with-all-ones/description/ | Medium | https://leetcode.com/problems/count-square-submatrices-with-all-ones/solutions/6711343/java-o-n-m-solution/ |
 |147| Count Sorted Vowel Strings | https://leetcode.com/problems/count-sorted-vowel-strings/description/ | Medium | https://leetcode.com/problems/count-sorted-vowel-strings/solutions/6710882/java-dp-o-n-math-o-1-solution/ |
 |146| Maximum Number of Points with Cost | https://leetcode.com/problems/maximum-number-of-points-with-cost/description/ | Medium | https://leetcode.com/problems/maximum-number-of-points-with-cost/solutions/6710660/java-o-n-m-solution/ |
 |145| Minimum Domino Rotations For Equal Row | https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/description/ | Medium | https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/solutions/6709139/java-o-n-solution/ |
