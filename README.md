@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|146| Maximum Number of Points with Cost | https://leetcode.com/problems/maximum-number-of-points-with-cost/description/ | Medium | https://leetcode.com/problems/maximum-number-of-points-with-cost/solutions/6710660/java-o-n-m-solution/ |
 |145| Minimum Domino Rotations For Equal Row | https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/description/ | Medium | https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/solutions/6709139/java-o-n-solution/ |
 |144| Push Dominoes | https://leetcode.com/problems/push-dominoes/description/ | Medium | https://leetcode.com/problems/push-dominoes/solutions/6707055/java-o-n-solution/ |
 |143| Burst Balloons | https://leetcode.com/problems/burst-balloons/description/ | Hard | https://leetcode.com/problems/burst-balloons/solutions/6706223/java-o-n-3-solution/ |
