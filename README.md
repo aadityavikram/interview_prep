@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|150| Egg Drop With 2 Eggs and N Floors | https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/description/ | Medium | https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/solutions/6712955/java-o-sqrt-n-solution/ |
 |149| Partition Array for Maximum Sum | https://leetcode.com/problems/partition-array-for-maximum-sum/description/ | Medium | https://leetcode.com/problems/partition-array-for-maximum-sum/solutions/6711699/java-o-n-k-solution/ |
 |148| Count Square Submatrices with All Ones | https://leetcode.com/problems/count-square-submatrices-with-all-ones/description/ | Medium | https://leetcode.com/problems/count-square-submatrices-with-all-ones/solutions/6711343/java-o-n-m-solution/ |
 |147| Count Sorted Vowel Strings | https://leetcode.com/problems/count-sorted-vowel-strings/description/ | Medium | https://leetcode.com/problems/count-sorted-vowel-strings/solutions/6710882/java-dp-o-n-math-o-1-solution/ |
