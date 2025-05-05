@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|153| Domino and Tromino Tiling | https://leetcode.com/problems/domino-and-tromino-tiling/description/ | Medium | https://leetcode.com/problems/domino-and-tromino-tiling/solutions/6715941/java-o-n-solution/ |
 |152| Minimum One Bit Operations to Make Integers Zero | https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/description/ | Hard | https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/solutions/6714705/java-o-log-n-solution/ |
 |151| Reducing Dishes | https://leetcode.com/problems/reducing-dishes/description/ | Hard | https://leetcode.com/problems/reducing-dishes/solutions/6713471/java-o-n-log-n-solution/ |
 |150| Egg Drop With 2 Eggs and N Floors | https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/description/ | Medium | https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/solutions/6712955/java-o-sqrt-n-solution/ |
