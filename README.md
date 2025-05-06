@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|156| Minimum Number of Increments on Subarrays to Form a Target Array | https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/description/ | Hard | https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/solutions/6719891/java-o-n-solution/ |
 |155| Stone Game II | https://leetcode.com/problems/stone-game-ii/description/ | Medium | https://leetcode.com/problems/stone-game-ii/solutions/6717695/java-o-n-2-solution/ |
 |154| Sliding Puzzle | https://leetcode.com/problems/sliding-puzzle/description/ | Hard | https://leetcode.com/problems/sliding-puzzle/solutions/6716963/java-o-2880-solution/ |
 |153| Domino and Tromino Tiling | https://leetcode.com/problems/domino-and-tromino-tiling/description/ | Medium | https://leetcode.com/problems/domino-and-tromino-tiling/solutions/6715941/java-o-n-solution/ |
