@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|157| Longest Palindromic Subsequence | https://leetcode.com/problems/longest-palindromic-subsequence/description/ | Medium | https://leetcode.com/problems/longest-palindromic-subsequence/solutions/6719974/java-o-n-2-solution/ |
 |156| Minimum Number of Increments on Subarrays to Form a Target Array | https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/description/ | Hard | https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/solutions/6719891/java-o-n-solution/ |
 |155| Stone Game II | https://leetcode.com/problems/stone-game-ii/description/ | Medium | https://leetcode.com/problems/stone-game-ii/solutions/6717695/java-o-n-2-solution/ |
 |154| Sliding Puzzle | https://leetcode.com/problems/sliding-puzzle/description/ | Hard | https://leetcode.com/problems/sliding-puzzle/solutions/6716963/java-o-2880-solution/ |
