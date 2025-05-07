@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|161| Find Minimum Time to Reach Last Room I | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/description/ | Medium | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/solutions/6722096/java-o-n-m-log-n-m-solution/ |
 |160| Cherry Pickup II | https://leetcode.com/problems/cherry-pickup-ii/description/ | Hard | https://leetcode.com/problems/cherry-pickup-ii/solutions/6720974/java-o-n-m-2-solution/ |
 |159| Cherry Pickup | https://leetcode.com/problems/cherry-pickup/description/ | Hard | https://leetcode.com/problems/cherry-pickup/solutions/6720499/java-o-n-3-solution/ |
 |158| Minimum Insertion Steps to Make a String Palindrome | https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/description/ | Hard | https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/solutions/6720041/java-o-n-2-solution/ |
