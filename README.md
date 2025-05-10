@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|164| Minimum Equal Sum of Two Arrays After Replacing Zeros | https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/description/ | Medium | https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/solutions/6729133/java-o-n-solution/ |
 |163| Find Minimum Time to Reach Last Room II | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii/description/ | Medium | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii/solutions/6724242/java-o-n-m-solution/ |
 |162| Maximum Absolute Sum of Any Subarray | https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/ | Medium | https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/solutions/6723367/java-o-n-solution/ |
 |161| Find Minimum Time to Reach Last Room I | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/description/ | Medium | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/solutions/6722096/java-o-n-m-log-n-m-solution/ |
