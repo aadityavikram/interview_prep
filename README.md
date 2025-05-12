@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|166| Sort Integers by The Power Value | https://leetcode.com/problems/sort-integers-by-the-power-value/description/ | Medium | https://leetcode.com/problems/sort-integers-by-the-power-value/solutions/6737305/java-o-n-log-hi-n-log-n-solution/ |
 |165| Minimum Equal Sum of Two Arrays After Replacing Zeros | https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/description/ | Medium | https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/solutions/6729133/java-o-n-solution/ |
 |164| Count Number of Balanced Permutations | https://leetcode.com/problems/count-number-of-balanced-permutations/description/ | Hard | https://leetcode.com/problems/count-number-of-balanced-permutations/solutions/6729243/java-o-n-2-sum-solution/ |
 |163| Find Minimum Time to Reach Last Room II | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii/description/ | Medium | https://leetcode.com/problems/find-minimum-time-to-reach-last-room-ii/solutions/6724242/java-o-n-m-solution/ |
