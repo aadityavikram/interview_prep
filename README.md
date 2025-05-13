@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|168| Total Characters in String After Transformations I | https://leetcode.com/problems/total-characters-in-string-after-transformations-i/description/ | Medium | https://leetcode.com/problems/total-characters-in-string-after-transformations-i/solutions/6739319/java-o-len-t-solution/ |
 |167| Longest Subarray of 1's After Deleting One Element | https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/ | Medium | https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/solutions/6737958/java-o-n-solution/ |
 |166| Sort Integers by The Power Value | https://leetcode.com/problems/sort-integers-by-the-power-value/description/ | Medium | https://leetcode.com/problems/sort-integers-by-the-power-value/solutions/6737305/java-o-n-log-hi-n-log-n-solution/ |
 |165| Minimum Equal Sum of Two Arrays After Replacing Zeros | https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/description/ | Medium | https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/solutions/6729133/java-o-n-solution/ |
