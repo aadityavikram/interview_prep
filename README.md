@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|171| Find the City With the Smallest Number of Neighbors at a Threshold Distance | https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/ | Medium | https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/solutions/6742631/java-o-v-3-solution/ |
 |170| Total Characters in String After Transformations II | https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/description/ | Hard | https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/solutions/6742333/java-o-26-3-log-t-solution/ |
 |169| Count Number of Teams | https://leetcode.com/problems/count-number-of-teams/description/ | Medium | https://leetcode.com/problems/count-number-of-teams/solutions/6742400/java-o-n-2-solution/ |
 |168| Total Characters in String After Transformations I | https://leetcode.com/problems/total-characters-in-string-after-transformations-i/description/ | Medium | https://leetcode.com/problems/total-characters-in-string-after-transformations-i/solutions/6739319/java-o-len-t-solution/ |
