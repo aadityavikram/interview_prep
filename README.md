@@ -2,6 +2,7 @@
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
 |170| Total Characters in String After Transformations II | https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/description/ | Hard | https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/solutions/6742333/java-o-26-3-log-t-solution/ |
+|169| Count Number of Teams | https://leetcode.com/problems/count-number-of-teams/description/ | Medium | https://leetcode.com/problems/count-number-of-teams/solutions/6742400/java-o-n-2-solution/ |
 |168| Total Characters in String After Transformations I | https://leetcode.com/problems/total-characters-in-string-after-transformations-i/description/ | Medium | https://leetcode.com/problems/total-characters-in-string-after-transformations-i/solutions/6739319/java-o-len-t-solution/ |
 |167| Longest Subarray of 1's After Deleting One Element | https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/ | Medium | https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/solutions/6737958/java-o-n-solution/ |
 |166| Sort Integers by The Power Value | https://leetcode.com/problems/sort-integers-by-the-power-value/description/ | Medium | https://leetcode.com/problems/sort-integers-by-the-power-value/solutions/6737305/java-o-n-log-hi-n-log-n-solution/ |
