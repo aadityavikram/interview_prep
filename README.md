@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|175| Set Matrix Zeroes | https://leetcode.com/problems/set-matrix-zeroes/description/ | Medium | https://leetcode.com/problems/set-matrix-zeroes/solutions/6765396/java-o-n-m-solution/ |
 |174| Sort Colors | https://leetcode.com/problems/sort-colors/description/ | Medium | https://leetcode.com/problems/sort-colors/solutions/6752244/java-o-n-solution/ |
 |173| Fair Distribution of Cookies | https://leetcode.com/problems/fair-distribution-of-cookies/description/ | Medium | https://leetcode.com/problems/fair-distribution-of-cookies/solutions/6749717/java-o-k-n-solution/ |
 |172| Longest Unequal Adjacent Groups Subsequence II | https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/description/ | Medium | https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/solutions/6745872/java-o-n-2-len-solution/ |
