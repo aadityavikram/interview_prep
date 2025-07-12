@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|180| Find the Prefix Common Array of Two Arrays | https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/ | Medium | https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/solutions/6950730/java-o-n-solution/ |
 |179| Count Number of Maximum Bitwise-OR Subsets | https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/description/ | Medium | https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/solutions/6950633/java-o-2-n-solution/ |
 |178| Find The Original Array of Prefix Xor | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/description/ | Medium | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/solutions/6950585/java-o-n-solution/ |
 |177| Partition Array According to Given Pivot | https://leetcode.com/problems/partition-array-according-to-given-pivot/description/ | Medium | https://leetcode.com/problems/partition-array-according-to-given-pivot/solutions/6950529/java-o-n-solution/ |
