@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|179| Count Number of Maximum Bitwise-OR Subsets | https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/description/ | Medium | https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/solutions/6950633/java-o-2-n-solution/ |
 |178| Find The Original Array of Prefix Xor | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/description/ | Medium | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/solutions/6950585/java-o-n-solution/ |
 |177| Partition Array According to Given Pivot | https://leetcode.com/problems/partition-array-according-to-given-pivot/description/ | Medium | https://leetcode.com/problems/partition-array-according-to-given-pivot/solutions/6950529/java-o-n-solution/ |
 |176| Minimum Number of Operations to Move All Balls to Each Box | https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/ | Medium | https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/solutions/6930344/java-o-n-solution/ |
