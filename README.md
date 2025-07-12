@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|178| Find The Original Array of Prefix Xor | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/description/ | Medium | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/solutions/6950585/java-o-n-solution/ |
 |177| Partition Array According to Given Pivot | https://leetcode.com/problems/partition-array-according-to-given-pivot/description/ | Medium | https://leetcode.com/problems/partition-array-according-to-given-pivot/solutions/6950529/java-o-n-solution/ |
 |176| Minimum Number of Operations to Move All Balls to Each Box | https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/ | Medium | https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/solutions/6930344/java-o-n-solution/ |
 |175| Set Matrix Zeroes | https://leetcode.com/problems/set-matrix-zeroes/description/ | Medium | https://leetcode.com/problems/set-matrix-zeroes/solutions/6765396/java-o-n-m-solution/ |
