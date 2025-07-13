@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|181| Queries on Number of Points Inside a Circle | https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/description/ | Medium | https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/solutions/6951922/java-o-n-q-solution/ |
 |180| Find the Prefix Common Array of Two Arrays | https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/ | Medium | https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/solutions/6950730/java-o-n-solution/ |
 |179| Count Number of Maximum Bitwise-OR Subsets | https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/description/ | Medium | https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/solutions/6950633/java-o-2-n-solution/ |
 |178| Find The Original Array of Prefix Xor | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/description/ | Medium | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/solutions/6950585/java-o-n-solution/ |
