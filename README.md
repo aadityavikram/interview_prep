@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|184| Subrectangle Queries | https://leetcode.com/problems/subrectangle-queries/description/ | Medium | https://leetcode.com/problems/subrectangle-queries/solutions/6952149/java-o-n-2-solution/ |
 |183| Maximum Binary Tree | https://leetcode.com/problems/maximum-binary-tree/description/ | Medium | https://leetcode.com/problems/maximum-binary-tree/solutions/6952106/java-o-n-2-solution/ |
 |182| Convert an Array Into a 2D Array With Conditions | https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/ | Medium | https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/solutions/6951964/java-o-n-solution/ |
 |181| Queries on Number of Points Inside a Circle | https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/description/ | Medium | https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/solutions/6951922/java-o-n-q-solution/ |
