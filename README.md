@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|187| Minimum Number of Operations to Make Array XOR Equal to K | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/description/ | Medium | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/solutions/6958934/java-o-n-solution/ |
 |186| Number of Laser Beams in a Bank | https://leetcode.com/problems/number-of-laser-beams-in-a-bank/description/ | Medium | https://leetcode.com/problems/number-of-laser-beams-in-a-bank/solutions/6958872/java-o-n-m-solution/ |
 |185| Sort the Students by Their Kth Score | https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/ | Medium | https://leetcode.com/problems/sort-the-students-by-their-kth-score/solutions/6958681/java-o-n-log-n-solution/ |
 |184| Subrectangle Queries | https://leetcode.com/problems/subrectangle-queries/description/ | Medium | https://leetcode.com/problems/subrectangle-queries/solutions/6952149/java-o-n-2-solution/ |
