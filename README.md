@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|186| Number of Laser Beams in a Bank | https://leetcode.com/problems/number-of-laser-beams-in-a-bank/description/ | Medium | https://leetcode.com/problems/number-of-laser-beams-in-a-bank/solutions/6958872/java-o-n-m-solution/ |
 |185| Sort the Students by Their Kth Score | https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/ | Medium | https://leetcode.com/problems/sort-the-students-by-their-kth-score/solutions/6958681/java-o-n-log-n-solution/ |
 |184| Subrectangle Queries | https://leetcode.com/problems/subrectangle-queries/description/ | Medium | https://leetcode.com/problems/subrectangle-queries/solutions/6952149/java-o-n-2-solution/ |
 |183| Maximum Binary Tree | https://leetcode.com/problems/maximum-binary-tree/description/ | Medium | https://leetcode.com/problems/maximum-binary-tree/solutions/6952106/java-o-n-2-solution/ |
