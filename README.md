@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|193| Spiral Matrix III | https://leetcode.com/problems/spiral-matrix-iii/description/ | Medium | https://leetcode.com/problems/spiral-matrix-iii/solutions/6961669/java-o-rows-cols-solution/ |
 |192| Maximum Number of Coins You Can Get | https://leetcode.com/problems/maximum-number-of-coins-you-can-get/description/ | Medium | https://leetcode.com/problems/maximum-number-of-coins-you-can-get/solutions/6961514/java-o-n-log-n-solution/ |
 |191| Queries on a Permutation With Key | https://leetcode.com/problems/queries-on-a-permutation-with-key/description/ | Medium | https://leetcode.com/problems/queries-on-a-permutation-with-key/solutions/6961449/java-o-m-2-solution/ |
 |190| Maximum XOR for Each Query | https://leetcode.com/problems/maximum-xor-for-each-query/description/?envType=problem-list-v2&envId=array | Medium | https://leetcode.com/problems/maximum-xor-for-each-query/solutions/6961320/java-o-n-solution/ |
