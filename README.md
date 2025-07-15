@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|190| Maximum XOR for Each Query | https://leetcode.com/problems/maximum-xor-for-each-query/description/?envType=problem-list-v2&envId=array | Medium | https://leetcode.com/problems/maximum-xor-for-each-query/solutions/6961320/java-o-n-solution/ |
 |189| Count Triplets That Can Form Two Arrays of Equal XOR | https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/description/ | Medium | https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/solutions/6961222/java-o-n-2-solution/ |
 |188| Minimum Amount of Time to Collect Garbage | https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/ | Medium | https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/solutions/6959022/java-o-n-g-solution/ |
 |187| Minimum Number of Operations to Make Array XOR Equal to K | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/description/ | Medium | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/solutions/6958934/java-o-n-solution/ |
