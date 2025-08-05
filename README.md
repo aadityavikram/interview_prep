@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+{196| Minimum Operations to Make Binary Array Elements Equal to One II | https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-ii/description/ | Medium | https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-ii/solutions/7047398/java-o-n-solution/ |
 |195| Minimum Operations to Make Binary Array Elements Equal to One I | https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/description/ | Medium | https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/solutions/7047092/java-o-n-solution/ |
 |194| Rearrange Array Elements by Sign | https://leetcode.com/problems/rearrange-array-elements-by-sign/description/ | Medium | https://leetcode.com/problems/rearrange-array-elements-by-sign/solutions/6966090/java-o-n-solution/ |
 |193| Spiral Matrix III | https://leetcode.com/problems/spiral-matrix-iii/description/ | Medium | https://leetcode.com/problems/spiral-matrix-iii/solutions/6961669/java-o-rows-cols-solution/ |
