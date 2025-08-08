@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|203| Longest Nice Subarray | https://leetcode.com/problems/longest-nice-subarray/description/ | Medium | https://leetcode.com/problems/longest-nice-subarray/solutions/7057844/java-o-n-solution/ |
 |202| Minimum Swaps to Group All 1's Together II | https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/description/ | Medium | https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/solutions/7057728/java-o-n-solution/ |
 |201| Max Consecutive Ones III | https://leetcode.com/problems/max-consecutive-ones-iii/description/ | Medium | https://leetcode.com/problems/max-consecutive-ones-iii/solutions/7057640/java-o-n-solution/ |
 |200| Maximize the Confusion of an Exam | https://leetcode.com/problems/maximize-the-confusion-of-an-exam/description/ | Medium | https://leetcode.com/problems/maximize-the-confusion-of-an-exam/solutions/7057418/java-o-n-solution/ |
