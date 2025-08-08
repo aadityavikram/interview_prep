@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|201| Max Consecutive Ones III | https://leetcode.com/problems/max-consecutive-ones-iii/description/ | Medium | https://leetcode.com/problems/max-consecutive-ones-iii/solutions/7057640/java-o-n-solution/ |
 |200| Maximize the Confusion of an Exam | https://leetcode.com/problems/maximize-the-confusion-of-an-exam/description/ | Medium | https://leetcode.com/problems/maximize-the-confusion-of-an-exam/solutions/7057418/java-o-n-solution/ |
 |199| Smallest Range Covering Elements from K Lists | https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/ | Hard | https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/solutions/7051337/java-o-n-log-k-solution/ |
 |198| Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold | https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/description/ | Medium | https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/solutions/7050930/java-o-n-solution/ |
