@@ -20,21 +20,21 @@
 | Resources for System Design | https://www.linkedin.com/posts/anshul-chhabra-46ba9b113_the-reason-youre-failing-at-system-design-activity-7356310312528044032-nn7H |
 | Hashmap get() Method | https://www.linkedin.com/posts/md-sohrab-31a728196_java-hashmap-datastructures-activity-7357359422697832448-1ShW |
 | Books and Playlists for System Design | https://www.linkedin.com/posts/jainshrayansh_books-udemy-youtube-activity-7359070833916497920-qwVa |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| System Design Resources | https://www.linkedin.com/posts/nk-systemdesign-one_if-i-had-to-start-over-with-system-design-activity-7358826274900910080-98Ar |
+| Java Interview Questions | https://www.linkedin.com/posts/priyanka-kumari-b18149134_java-springboot-backenddevelopment-activity-7359163189944643585-kfaG |
+| Articles for System Design | https://www.linkedin.com/posts/fernando-franco-4696708_if-youre-a-software-engineer-who-wants-to-activity-7358878397155926016-3-WK |
+| SOLID Principles | https://www.linkedin.com/posts/alexxubyte_systemdesign-coding-interviewtips-activity-7358161115161186304-wYMO |
+| Java Microservices Interview Questions | https://www.linkedin.com/posts/zaid-bin-gufran-927b3b331_java-microservices-springboot-activity-7358466731343765505-c1CK |
+| Secure Logout Flow | https://www.linkedin.com/posts/mysticwillz_youre-in-a-backend-interview-they-ask-activity-7357356381374443521-MbaG |
+| Virtual Threads in Java | https://www.linkedin.com/posts/i-am-madhuk_java21-virtualthreads-projectloom-activity-7359273720256876544-6_Qw |
+| Distributed Locks | https://www.linkedin.com/posts/shrey-garg-467038165_bytesizedsystemdesign-activity-7358037253039771650-afqk |
+| Java Interview Questions | https://www.linkedin.com/posts/activity-7359522729257062400-l9Uc |
+| Github Repositories for AI Engineering | https://www.linkedin.com/posts/meri-nova_if-i-only-had-to-choose-5-github-repos-to-activity-7358568233202823168-kxhM |
+| Difference between map() and flatMap() in Java 8 Streams | https://www.linkedin.com/posts/satyamraikwar_java-map-flatmap-activity-7357255076354174976-y5h8 |
+| Java Interview Questions | https://www.linkedin.com/posts/taparup-mukherjee_java-javadeveloper-springboot-activity-7358185505475203072-Cma4 |
+| SDE 1/2/Sr Preparation Methodology | https://www.linkedin.com/posts/kunikamalhotra_collab-jobswitch-leetcode-activity-7359794720186773504-100G |
+| System Design Use Cases | https://www.linkedin.com/posts/ankur-dhawan01_sde1-sde2-sde3-activity-7359147994417393664-z3fx |
+| DevOps Architect Interview Questions | https://www.linkedin.com/posts/sudheer-medaramettla-073556117_devops-kubernetes-aws-activity-7358856768245940226-W1bc |
+| Code Quality Progression through years | https://www.linkedin.com/posts/raul-junco_code-quality-didnt-happen-by-accident-activity-7359555065679945728-4Lsj |
+| Java Stream API | https://www.linkedin.com/posts/hrishikesh015_java-streamapi-java8-activity-7357815063463776257-Bwc5 |
+| Optimisation in Systems | https://www.linkedin.com/posts/kriti-rohilla_my-api-was-dying-500ms-response-times-angry-activity-7358717051487576067-z9B2 |
