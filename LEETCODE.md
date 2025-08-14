@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|207| Find the Power of K-Size Subarrays I | https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/description/ | Medium | https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/solutions/7080688/java-o-n-solution/ |
 |206| Maximum Erasure Value | https://leetcode.com/problems/maximum-erasure-value/description/ | Medium | https://leetcode.com/problems/maximum-erasure-value/solutions/7080028/java-o-n-solution/ |
 |205| Grumpy Bookstore Owner | https://leetcode.com/problems/grumpy-bookstore-owner/description/ | Medium | https://leetcode.com/problems/grumpy-bookstore-owner/solutions/7079955/java-o-n-solution/ |
 |204| Arithmetic Slices | https://leetcode.com/problems/arithmetic-slices/description/ | Medium | https://leetcode.com/problems/arithmetic-slices/solutions/7057991/java-o-n-solution/ |
