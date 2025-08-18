@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|210| Partition Labels | https://leetcode.com/problems/partition-labels/description/ | Medium | https://leetcode.com/problems/partition-labels/solutions/7095507/java-o-n-solution/ |
 |209| Strictly Palindromic Number | https://leetcode.com/problems/strictly-palindromic-number/description/ | Medium | https://leetcode.com/problems/strictly-palindromic-number/solutions/7090890/java-o-1-solution/ |
 |208| Find Longest Special Substring That Occurs Thrice I | https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-i/description/ | Medium | https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-i/solutions/7088376/java-o-n-log-n-solution/ |
 |207| Find the Power of K-Size Subarrays I | https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/description/ | Medium | https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/solutions/7080688/java-o-n-solution/ |
