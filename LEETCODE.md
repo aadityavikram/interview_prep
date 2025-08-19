@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|214| Minimum Number of Swaps to Make the String Balanced | https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/ | Medium | https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/solutions/7099212/java-o-n-solution/ |
 |213| Rotating the Box | https://leetcode.com/problems/rotating-the-box/description/ | Medium | https://leetcode.com/problems/rotating-the-box/solutions/7099074/java-o-n-m-solution/ |
 |212| Minimize Maximum Pair Sum in Array | https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/ | Medium | https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/solutions/7098913/java-o-n-solution/ |
 |211| Maximum Twin Sum of a Linked List | https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/ | Medium | https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/solutions/7095675/java-o-n-solution/ |
