@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|212| Minimize Maximum Pair Sum in Array | https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/ | Medium | https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/solutions/7098913/java-o-n-solution/ |
 |211| Maximum Twin Sum of a Linked List | https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/ | Medium | https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/solutions/7095675/java-o-n-solution/ |
 |210| Partition Labels | https://leetcode.com/problems/partition-labels/description/ | Medium | https://leetcode.com/problems/partition-labels/solutions/7095507/java-o-n-solution/ |
 |209| Strictly Palindromic Number | https://leetcode.com/problems/strictly-palindromic-number/description/ | Medium | https://leetcode.com/problems/strictly-palindromic-number/solutions/7090890/java-o-1-solution/ |
