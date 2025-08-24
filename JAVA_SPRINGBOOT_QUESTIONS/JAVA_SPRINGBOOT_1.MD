@@ -815,7 +815,16 @@ Eureka + LoadBalancer will resolve to an actual instance.
 
 
 
-12. 
+# 12. What is the difference between service registry and service discovery?
+
+| Aspect | Service Registry | Service Discovery |
+|--------|------------------|-------------------|
+| What | Database of available services | Process of finding a service |
+| Role | Stores service names, hosts, ports | Uses registry to resolve service endpoints |
+| Examples | Eureka, Consul, Zookeeper, Kubernetes DNS | RestTemplate + @LoadBalanced, Feign Client, API Gateway |
+
+Service Registry - Who’s available?
+Service Discovery - How do I find and talk to them?
 
 <br />
 <br />
