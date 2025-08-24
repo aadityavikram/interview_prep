@@ -259,6 +259,10 @@ spring.redis.port=6379
 @Cacheable(value = "books", key = "#isbn.concat('-').concat(#locale)")
 public Book getBookByIsbn(String isbn, String locale) { ... }
 ```
+<br />
+<br />
+<br />
 
 
 
+# 4.
