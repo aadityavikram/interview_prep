@@ -402,22 +402,20 @@ public class MyApp { }
 1. Singleton (default)  
     a. One instance per Spring container.  
     b. Same bean is reused everywhere (@Autowired).  
+    c. Default scope in Spring Boot.  
+    d. Good for stateless services.  
 ```java
 @Component
 @Scope("singleton")
 public class MySingletonService { }
 ```
-
-    c. Default scope in Spring Boot.  
-    d. Good for stateless services.  
 2. Prototype  
     a. New instance every time the bean is requested.  
+    b. Useful when you want a fresh object each time.  
+    c. Spring does not manage the full lifecycle (e.g., no automatic destroy).  
 ```java
 @Component
 @Scope("prototype")
 public class MyPrototypeService { }
 ```
-
-    b. Useful when you want a fresh object each time.  
-    c. Spring does not manage the full lifecycle (e.g., no automatic destroy).  
 3. 
