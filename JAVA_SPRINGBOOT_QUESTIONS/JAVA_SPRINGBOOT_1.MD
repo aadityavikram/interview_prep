@@ -270,20 +270,16 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
 2. Synchronous Communication (Direct, Real-time) - One service calls another and waits for a response.  
     a. Common ways: -  
 
-    | Way | Feature |
+    | Col 1 | Col 2 |
     |-----|---------|
-    | REST (HTTP) | |
+    | REST (HTTP) | Most common approach. |
+    | | Uses @RestController in Spring Boot. |
     | gRPC (HTTP/2, binary protocol) | Faster, strongly typed, supports streaming. |
     | | Good for high-performance internal communication. |
+    | GraphQL federation | Services expose GraphQL APIs, aggregated by a gateway. |
+    | Pros | Simple, widely understood, real-time. |
+    | Cons | Tight coupling, network latency, failures propagate (if B is down, A fails).
 
-        1. REST (HTTP)  
-        2. gRPC (HTTP/2, binary protocol)  
-            a. Faster, strongly typed, supports streaming.  
-            b. Good for high-performance internal communication.  
-        3. GraphQL federation  
-            a. Services expose GraphQL APIs, aggregated by a gateway.  
-    b. Pros: Simple, widely understood, real-time.  
-    c. Cons: Tight coupling, network latency, failures propagate (if B is down, A fails).  
 3. Asynchronous Communication (Event-driven, Decoupled) - One service sends a message/event and doesn’t wait for a response.
     a. Common ways: -  
         1. Message Brokers (Pub/Sub or Queue) - Kafka, RabbitMQ, ActiveMQ, AWS SQS, etc.  
