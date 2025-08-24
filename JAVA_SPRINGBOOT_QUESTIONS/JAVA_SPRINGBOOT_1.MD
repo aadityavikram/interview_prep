@@ -360,6 +360,7 @@ Other useful conditionals:
 @ConditionalOnClass → Only if a class is on classpath.  
 @ConditionalOnMissingBean → Only if no bean of that type exists.  
 @ConditionalOnProperty → Only if a property is set.  
+
 5. Create a Custom Starter (Custom Auto-Configuration) - For reusable libraries or internal frameworks, you can define your own auto-configuration.
 ```java
 @Configuration
