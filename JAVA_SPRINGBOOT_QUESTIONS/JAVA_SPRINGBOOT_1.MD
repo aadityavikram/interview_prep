@@ -236,13 +236,13 @@ public Book saveBook(Book book) {
     return bookRepository.save(book);
 }
 ```
-7. Supported Cache Providers: -
-    a. Simple (default) → Uses a ConcurrentHashMap (in-memory, good for testing)
-    b. Ehcache
-    c. Caffeine (modern, high-performance in-memory cache)
-    d. Hazelcast
-    e. Redis (distributed cache, best for scaling)
-    f. JCache (JSR-107)
+7. Supported Cache Providers: -  
+    a. Simple (default) → Uses a ConcurrentHashMap (in-memory, good for testing)  
+    b. Ehcache  
+    c. Caffeine (modern, high-performance in-memory cache)  
+    d. Hazelcast  
+    e. Redis (distributed cache, best for scaling)  
+    f. JCache (JSR-107)  
 ```java
 <dependency>
     <groupId>org.springframework.boot</groupId>
