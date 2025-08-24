@@ -236,7 +236,7 @@ public Book saveBook(Book book) {
     return bookRepository.save(book);
 }
 ```
-S7. upported Cache Providers: -
+7. Supported Cache Providers: -
     a. Simple (default) → Uses a ConcurrentHashMap (in-memory, good for testing)
     b. Ehcache
     c. Caffeine (modern, high-performance in-memory cache)
