@@ -689,8 +689,7 @@ com.example.MyAutoConfiguration
     b. Consul  
     c. Zookeeper  
     d. Kubernetes Service Registry  
-4. Service Registry in Spring Boot (Eureka Example)  
-    a. Create Eureka Server (Service Registry)
+4. Create Eureka Server (Service Registry)
 
 ```java
 <dependency>
@@ -707,7 +706,7 @@ public class EurekaServerApplication {
     }
 }
 ```
-```yml
+```java
 server:
   port: 8761
 
@@ -717,7 +716,64 @@ eureka:
     fetch-registry: false
 ```  
 
-    b. Start this → Eureka dashboard at http://localhost:8761.
+Start this → Eureka dashboard at http://localhost:8761.  
+
+5. Create Eureka Client (Microservice)  
+```java
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
+```java
+@SpringBootApplication
+@EnableDiscoveryClient   // marks as a Eureka client
+public class OrderServiceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OrderServiceApplication.class, args);
+    }
+}
+```
+```java
+spring:
+  application:
+    name: order-service   # service name to register in Eureka
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+```
+
+This registers order-service in Eureka.
+
+6. Discover Another Service  
+    a. Say user-service also registers in Eureka.  
+    b. From order-service, you can call it dynamically using Spring Cloud LoadBalancer  
+```java
+@Service
+public class UserClient {
+
+    private final RestTemplate restTemplate;
+
+    public UserClient(RestTemplateBuilder builder) {
+        this.restTemplate = builder.build();
+    }
+
+    public String getUserData() {
+        return restTemplate.getForObject("http://user-service/users/1", String.class);
+    }
+}
+```
+Instead of hardcoding http://localhost:8082, we used http://user-service.  
+Eureka + LoadBalancer will resolve to an actual instance.  
+
+7. Alternatives  
+    a. Consul: spring-cloud-starter-consul-discovery  
+    b. Zookeeper: spring-cloud-starter-zookeeper-discovery  
+    c. Kubernetes: Service discovery handled by Kubernetes service objects (no need for Eureka).
 <br />
 <br />
 <br />
