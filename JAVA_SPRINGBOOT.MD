@@ -95,39 +95,39 @@ public @interface LogExecutionTime {
 2. Using Custom Annotation with Spring AOP - Let’s say you want to log how long a method takes whenever it’s annotated with @LogExecutionTime.
     a. Step 1: Define the annotation (Already shown above)
     b. Step 2: Create an Aspect
-    ```java
-    import org.aspectj.lang.ProceedingJoinPoint;
-    import org.aspectj.lang.annotation.Around;
-    import org.aspectj.lang.annotation.Aspect;
-    import org.springframework.stereotype.Component;
-    
-    @Aspect
-    @Component
-    public class LoggingAspect {
-    
-        @Around("@annotation(LogExecutionTime)")
-        public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
-            long start = System.currentTimeMillis();
-    
-            Object proceed = joinPoint.proceed();
-    
-            long executionTime = System.currentTimeMillis() - start;
-            System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
-            return proceed;
-        }
+```java
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @Around("@annotation(LogExecutionTime)")
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+
+        Object proceed = joinPoint.proceed();
+
+        long executionTime = System.currentTimeMillis() - start;
+        System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+        return proceed;
     }
-    ```
-    c. Step 3: Use the annotation
-    ```java
-    @Service
-    public class MyService {
-    
-        @LogExecutionTime
-        public void serve() throws InterruptedException {
-            Thread.sleep(1000);
-        }
+}
+```
+c. Step 3: Use the annotation
+```java
+@Service
+public class MyService {
+
+    @LogExecutionTime
+    public void serve() throws InterruptedException {
+        Thread.sleep(1000);
     }
-    ```
+}
+```
     Whenever you call myService.serve(), it will print execution time.
 3. Custom Annotation with Attributes - You can add parameters to annotations
 ```java
