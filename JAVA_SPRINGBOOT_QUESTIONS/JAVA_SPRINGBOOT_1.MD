@@ -805,7 +805,8 @@ Eureka + LoadBalancer will resolve to an actual instance.
 5. Alternatives to Eureka  
     a. Consul (spring-cloud-starter-consul-discovery)  
     b. Zookeeper (spring-cloud-starter-zookeeper-discovery)  
-    c. Kubernetes (no Eureka needed → services are auto-discovered via DNS, e.g., http://user-service:8080)
+    c. Kubernetes (no Eureka needed → services are auto-discovered via DNS, e.g., http://user-service:8080)  
+6. Code in previous question
 <br />
 <br />
 <br />
