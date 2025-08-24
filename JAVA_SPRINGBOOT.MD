@@ -1,7 +1,7 @@
 ### How to handle multiple beans in Springboot?
 | S.No. | Answer | Example |
 |-------|--------|---------|
-| 1 | Use @Primary - Mark one of the beans as the default bean for autowiring | ```java 
+| 1 | Use @Primary - Mark one of the beans as the default bean for autowiring | <pre><code>
 @Configuration
 public class AppConfig {
 
@@ -15,4 +15,4 @@ public class AppConfig {
     public PaymentService paypalPaymentService() {
         return new PaypalPaymentService();
     }
-} ``` |
+} </code></pre> |
