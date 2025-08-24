@@ -453,10 +453,17 @@ public class MyApplicationScopedBean { }
 @Scope("websocket")
 public class MyWebSocketBean { }
 ```
-7. Custom Scope  
-    a. Implement Scope interface.  
-    b. Register it in CustomScopeConfigurer.  
-    c. Use @Scope("customScopeName").  
+<br />
+<br />
+<br />
+
+
+
+
+# 7. How to create custom scope in Springboot?
+1. Implement Scope interface.  
+2. Register it in CustomScopeConfigurer.  
+3. Use @Scope("customScopeName").  
 ```java
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.Scope;
@@ -531,3 +538,31 @@ public class MyThreadScopedBean {
     }
 }
 ```
+<br />
+<br />
+<br />
+
+
+
+
+# 8. @SpringBootApplication annotation
+
+<br />
+<br />
+<br />
+
+
+
+
+
+# 9. @AutoConfiguration annotation
+
+<br />
+<br />
+<br />
+
+
+
+
+
+# 10. What is the difference between Service Registry and Service Discovery?
