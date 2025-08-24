@@ -302,9 +302,9 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
 
 5. Hybrid Approach
 
-Use synchronous REST/gRPC for query-style operations.  
-Use asynchronous messaging (Kafka/RabbitMQ) for events and decoupling.  
-Use API Gateway + Service Discovery for routing and load balancing.  
+    a. Use synchronous REST/gRPC for query-style operations.  
+    b. Use asynchronous messaging (Kafka/RabbitMQ) for events and decoupling.  
+    c. Use API Gateway + Service Discovery for routing and load balancing.  
 
 <br />
 <br />
