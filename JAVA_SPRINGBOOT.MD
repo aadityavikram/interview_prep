@@ -91,7 +91,9 @@ public @interface LogExecutionTime {
 }
 ```
 @Target → Defines where you can use it (class, method, field, parameter, etc.).
+
 @Retention → Defines how long it’s kept (runtime means Spring can read it at runtime).
+
 2. Using Custom Annotation with Spring AOP - Let’s say you want to log how long a method takes whenever it’s annotated with @LogExecutionTime.
     a. Step 1: Define the annotation (Already shown above)
     b. Step 2: Create an Aspect
