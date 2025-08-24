@@ -1,4 +1,4 @@
-### 1. How to handle multiple beans in Springboot?
+## 1. How to handle multiple beans in Springboot?
 1. Use @Primary - Mark one of the beans as the default bean for autowiring
 
 ``` java
@@ -80,7 +80,10 @@ public class MyCustomCondition implements Condition {
         }
     }
 ```
-### 2. How to define custom annotation in Springboot?
+
+
+
+## 2. How to define custom annotation in Springboot?
 1. Basic Custom Annotation - A simple annotation is defined with @interface
 ```java
 import java.lang.annotation.*;
