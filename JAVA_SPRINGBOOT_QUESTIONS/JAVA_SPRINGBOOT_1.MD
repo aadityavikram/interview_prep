@@ -270,6 +270,7 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
 2. Synchronous Communication (Direct, Real-time) - One service calls another and waits for a response.  
     a. Common ways: -  
 | Way | Feature |
+|-----|---------|
 | REST (HTTP) | |
 | gRPC (HTTP/2, binary protocol) | Faster, strongly typed, supports streaming. |
 | | Good for high-performance internal communication. |
