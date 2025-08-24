@@ -604,7 +604,72 @@ public class MyApp {
 
 
 # 9. @AutoConfiguration annotation
+1. It’s a specialized form of @Configuration that tells Spring Boot that this is an auto-configuration class, load it automatically if certain conditions are met.  
+```java
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 
+@AutoConfiguration
+public class MyAutoConfig {
+    @Bean
+    public MyService myService() {
+        return new MyService();
+    }
+}
+```
+2. This bean will only be registered if the auto-configuration is actually imported (by Boot’s auto-configuration mechanism).  
+3. Difference from @Configuration  
+    a. @Configuration → You explicitly declare in your app (@Import, @ComponentScan, etc.).  
+    b. @AutoConfiguration → Spring Boot discovers it automatically (from META-INF/spring/... files) and applies it conditionally.  
+4. Where it’s Used  
+    a. In Spring Boot 2.x, auto-configurations were registered via  
+
+```java
+META-INF/spring.factories
+```
+
+    b. In Spring Boot 3.x, this was replaced by 
+
+```java
+META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+```
+5. Conditional Loading - Auto-configurations are almost always combined with conditions so they only apply when needed  
+```java
+@AutoConfiguration
+@ConditionalOnClass(name = "com.example.ExternalLibrary")
+@ConditionalOnMissingBean(MyService.class)
+public class MyAutoConfig {
+
+    @Bean
+    public MyService myService() {
+        return new MyService();
+    }
+}
+```
+
+    a. This will only load if ExternalLibrary is on the classpath  
+    b. and no other MyService bean is already defined.  
+6. Example: Custom Starter  
+    a. Create auto-config class
+
+```java
+@AutoConfiguration
+@EnableConfigurationProperties(MyProperties.class)
+public class MyAutoConfiguration {
+    @Bean
+    @ConditionalOnMissingBean
+    public MyService myService(MyProperties props) {
+        return new MyService(props.getName());
+    }
+}
+```
+
+    b. Register it in META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports  
+
+```java
+com.example.MyAutoConfiguration
+```
+
+    c. Add your starter as a dependency → Spring Boot will configure it automatically.  
 <br />
 <br />
 <br />
