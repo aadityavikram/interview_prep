@@ -782,8 +782,30 @@ Eureka + LoadBalancer will resolve to an actual instance.
 
 
 
-# 11. 
+# 11. What is service discovery and how is it implemented in Springboot?
+1. In microservices architecture, service instances  
+    a. may run on different hosts/ports  
+    b. can scale up/down dynamically  
+    c. can fail and restart at different addresses  
+2. Hardcoding service URLs (http://localhost:8081) is impossible to maintain.  
+3. Service Discovery solves this  
+    a. A service (e.g., order-service) queries the Service Registry (e.g., Eureka, Consul) to discover another service (e.g., user-service).  
+    b. The registry returns a list of healthy instances.  
+    c. A load balancer picks one instance and routes the request.  
+4. Types of Service Discovery  
 
+    | Discovery Type | Features |
+    |----------------|----------|
+    | Client-Side Discovery | The client queries the registry and decides where to send the request. |
+    | | Example: Netflix Eureka + Spring Cloud LoadBalancer. |
+    | Server-Side Discovery | The client sends a request to a load balancer (gateway). |
+    | | The load balancer queries the registry and forwards the request. |
+    | | Example: Spring Cloud Gateway, Kubernetes Ingress. |
+
+5. Alternatives to Eureka  
+    a. Consul (spring-cloud-starter-consul-discovery)  
+    b. Zookeeper (spring-cloud-starter-zookeeper-discovery)  
+    c. Kubernetes (no Eureka needed → services are auto-discovered via DNS, e.g., http://user-service:8080)
 <br />
 <br />
 <br />
