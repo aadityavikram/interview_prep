@@ -265,4 +265,31 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
 
 
 
-# 4.
+# 4. How does inter microservice communication happen?
+1. In a microservices architecture, multiple services run independently, often on different servers/containers. For the system to work, these services need to communicate with each other.  
+2. Synchronous Communication (Direct, Real-time) - One service calls another and waits for a response.  
+    a. Common ways: -  
+        1. REST (HTTP)  
+        2. gRPC (HTTP/2, binary protocol)  
+            a. Faster, strongly typed, supports streaming.  
+            b. Good for high-performance internal communication.  
+        3. GraphQL federation  
+            a. Services expose GraphQL APIs, aggregated by a gateway.  
+    b. Pros: Simple, widely understood, real-time.  
+    c. Cons: Tight coupling, network latency, failures propagate (if B is down, A fails).  
+3. Asynchronous Communication (Event-driven, Decoupled) - One service sends a message/event and doesn’t wait for a response.
+    a. Common ways: -  
+        1. Message Brokers (Pub/Sub or Queue) - Kafka, RabbitMQ, ActiveMQ, AWS SQS, etc.  
+        2. Event Bus / Event Streaming  
+            a. Services publish "domain events" (like OrderCreated) that others can subscribe to.  
+            b. Encourages event-driven architecture.  
+    b. Pros: Loosely coupled, resilient, scalable.  
+    c. Cons: Harder debugging, eventual consistency, added infra (Kafka, RabbitMQ).  
+4. Service Discovery + API Gateway - In microservices, service locations change dynamically (containers restart, scaling).  
+    a. Service Discovery (Eureka, Consul, Zookeeper, Kubernetes Service Registry) helps services find each other.  
+    b. API Gateway (Spring Cloud Gateway, Nginx, Kong, Zuul) acts as a single entry point → routes requests to the right service, adds security, rate limiting, logging, etc.  
+<br />
+<br />
+<br />
+
+
