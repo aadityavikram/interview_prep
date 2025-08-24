@@ -418,4 +418,116 @@ public class MySingletonService { }
 @Scope("prototype")
 public class MyPrototypeService { }
 ```
-3. 
+3. Request (Web-aware scope)  
+    a. One instance per HTTP request.  
+    b. Only works in a web app.  
+    c. Useful for storing request-specific data.  
+```java
+@Component
+@Scope("request")
+public class MyRequestScopedBean { }
+```
+4. Session (Web-aware scope)  
+    a. One instance per HTTP session.  
+    b. Same object reused across multiple requests from the same user session.  
+    c. Useful for storing user session data (like a shopping cart).  
+```java
+@Component
+@Scope("session")
+public class MySessionScopedBean { }
+```
+5. Application (Web-aware scope)  
+    a. One instance per ServletContext (per web app).  
+    b. Shared across all sessions & requests.  
+    c. Similar to a global singleton, but tied to the web context.  
+```java
+@Component
+@Scope("application")
+public class MyApplicationScopedBean { }
+```
+6. WebSocket (Web-aware scope)  
+    a. One instance per WebSocket session.  
+    b. Useful in WebSocket-based apps (chat, live notifications).  
+```java
+@Component
+@Scope("websocket")
+public class MyWebSocketBean { }
+```
+7. Custom Scope  
+    a. Implement Scope interface.  
+    b. Register it in CustomScopeConfigurer.  
+    c. Use @Scope("customScopeName").  
+```java
+import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.config.Scope;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ThreadScope implements Scope {
+
+    private static final ThreadLocal<Map<String, Object>> threadScope =
+            ThreadLocal.withInitial(HashMap::new);
+
+    @Override
+    public Object get(String name, ObjectFactory<?> objectFactory) {
+        Map<String, Object> scope = threadScope.get();
+        return scope.computeIfAbsent(name, k -> objectFactory.getObject());
+    }
+
+    @Override
+    public Object remove(String name) {
+        return threadScope.get().remove(name);
+    }
+
+    @Override
+    public void registerDestructionCallback(String name, Runnable callback) {
+        // Not supported in this example (can be implemented if needed)
+    }
+
+    @Override
+    public Object resolveContextualObject(String key) {
+        return null;
+    }
+
+    @Override
+    public String getConversationId() {
+        return Thread.currentThread().getName();
+    }
+}
+```
+```java
+import org.springframework.beans.factory.config.CustomScopeConfigurer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Configuration
+public class ScopeConfig {
+
+    @Bean
+    public static CustomScopeConfigurer customScopeConfigurer() {
+        CustomScopeConfigurer configurer = new CustomScopeConfigurer();
+        Map<String, Object> scopes = new HashMap<>();
+        scopes.put("thread", new ThreadScope());
+        configurer.setScopes(scopes);
+        return configurer;
+    }
+}
+```
+```java
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("thread")
+public class MyThreadScopedBean {
+    private final String id = java.util.UUID.randomUUID().toString();
+
+    public String getId() {
+        return id;
+    }
+}
+```
