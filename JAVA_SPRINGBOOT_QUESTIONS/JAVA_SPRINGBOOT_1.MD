@@ -80,9 +80,9 @@ public class MyCustomCondition implements Condition {
         }
     }
 ```
-
-
-
+ 
+ 
+ 
 # 2. How to define custom annotation in Springboot?
 1. Basic Custom Annotation - A simple annotation is defined with @interface
 ```java
