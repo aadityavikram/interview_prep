@@ -311,3 +311,90 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
 <br />
 
 
+# 5. How can we customize automatic configuration in Springboot?
+1. Override Beans with @Bean - If Spring Boot auto-configures a bean, and you define your own bean of the same type/name, Spring will use yours instead.
+```java
+@Configuration
+public class MyDataSourceConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        return DataSourceBuilder.create()
+                .url("jdbc:mysql://localhost:3306/mydb")
+                .username("user")
+                .password("pass")
+                .build();
+    }
+}
+```
+2. Use application.properties / application.yml - Most auto-configurations are controlled via Spring Boot properties.
+Example: Instead of writing your own DataSource bean, you can set properties:  
+```java
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+spring.datasource.username=user
+spring.datasource.password=pass
+spring.datasource.hikari.maximum-pool-size=10
+```
+3. Exclude Auto-Configurations - You can disable specific auto-configurations if you don’t want them.
+```java
+@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
+public class MyApp { ... }
+```
+```java
+spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+```
+4. Conditional Auto-Configuration with @Conditional - You can create your own auto-configuration class that only applies under certain conditions.
+```java
+@Configuration
+@ConditionalOnProperty(name = "featureX.enabled", havingValue = "true")
+public class FeatureXConfig {
+
+    @Bean
+    public FeatureXService featureXService() {
+        return new FeatureXService();
+    }
+}
+```
+This bean will only load if featureX.enabled=true in properties.  
+Other useful conditionals:  
+@ConditionalOnClass → Only if a class is on classpath.  
+@ConditionalOnMissingBean → Only if no bean of that type exists.  
+@ConditionalOnProperty → Only if a property is set.  
+5. Create a Custom Starter (Custom Auto-Configuration) - For reusable libraries or internal frameworks, you can define your own auto-configuration.
+```java
+@Configuration
+@ConditionalOnClass(MyService.class)
+@EnableConfigurationProperties(MyProperties.class)
+public class MyAutoConfiguration {
+
+    @Bean
+    @ConditionalOnMissingBean
+    public MyService myService(MyProperties props) {
+        return new MyService(props.getName(), props.getTimeout());
+    }
+}
+```
+```java
+@ConfigurationProperties(prefix = "my.service")
+public class MyProperties {
+    private String name = "default";
+    private int timeout = 30;
+    // getters and setters
+}
+```
+```java
+com.example.config.MyAutoConfiguration
+```
+6. Use @EnableAutoConfiguration selectively
+```java
+@Configuration
+@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class })
+@ComponentScan
+public class MyApp { }
+```
+<br />
+<br />
+<br />
+
+
+# 6.
