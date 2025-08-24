@@ -407,6 +407,7 @@ public class MyApp { }
 @Scope("singleton")
 public class MySingletonService { }
 ```
+
     c. Default scope in Spring Boot.  
     d. Good for stateless services.  
 2. Prototype  
@@ -416,6 +417,7 @@ public class MySingletonService { }
 @Scope("prototype")
 public class MyPrototypeService { }
 ```
+
     b. Useful when you want a fresh object each time.  
     c. Spring does not manage the full lifecycle (e.g., no automatic destroy).  
 3. 
