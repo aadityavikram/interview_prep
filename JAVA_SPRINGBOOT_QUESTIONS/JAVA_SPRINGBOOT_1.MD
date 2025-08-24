@@ -300,6 +300,12 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
     | | Acts as a single entry point |
     | | Routes requests to the right service, adds security, rate limiting, logging, etc. |
 
+5. Hybrid Approach
+
+Use synchronous REST/gRPC for query-style operations.  
+Use asynchronous messaging (Kafka/RabbitMQ) for events and decoupling.  
+Use API Gateway + Service Discovery for routing and load balancing.  
+
 <br />
 <br />
 <br />
