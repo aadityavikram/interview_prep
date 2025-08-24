@@ -814,8 +814,83 @@ Eureka + LoadBalancer will resolve to an actual instance.
 
 
 
+# 12. @LoadBalanced annotation
+1. It is an annotation from Spring Cloud LoadBalancer that you apply on a RestTemplate (or WebClient) bean.  
+2. It tells Spring that this RestTemplate should resolve service names (like http://user-service) into actual service instances from the Service Registry and also perform load balancing if multiple instances exist.  
+3. Define a RestTemplate Bean  
+```java
+@Configuration
+public class AppConfig {
 
-# 12. What is the difference between service registry and service discovery?
+    @Bean
+    @LoadBalanced   // enables service discovery + load balancing
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+```
+4. Use It in a Service  
+```java
+@Service
+public class UserClient {
+
+    private final RestTemplate restTemplate;
+
+    public UserClient(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    public String getUserData() {
+        // Notice we are calling "user-service" (service name), not host:port
+        return restTemplate.getForObject("http://user-service/users/1", String.class);
+    }
+}
+```
+5. How It Works  
+    a. user-service is registered in Eureka (or Consul, Zookeeper, Kubernetes).  
+    b. When the call http://user-service/users/1 is made  
+    c. @LoadBalanced intercepts the call.  
+    d. Queries the service registry for available instances of user-service.  
+    e. Picks one instance (using round-robin by default).  
+    f. Sends the request to the actual URL (e.g., http://localhost:8081/users/1).  
+6. Without @LoadBalanced  
+    a. Then calling http://user-service/... would fail, because RestTemplate would treat it as a normal hostname (and DNS won’t know user-service).  
+    b. You’d have to hardcode http://localhost:8081 instead.  
+```java
+@Bean
+public RestTemplate restTemplate() {
+    return new RestTemplate();
+}
+```
+7. With WebClient (Reactive Alternative)  
+    a. You can also use @LoadBalanced with WebClient.Builder  
+```java
+@Bean
+@LoadBalanced
+public WebClient.Builder loadBalancedWebClientBuilder() {
+    return WebClient.builder();
+}
+```
+```java
+@Autowired
+private WebClient.Builder webClientBuilder;
+
+public Mono<String> getUser() {
+    return webClientBuilder.build()
+            .get()
+            .uri("http://user-service/users/1")
+            .retrieve()
+            .bodyToMono(String.class);
+}
+```
+<br />
+<br />
+<br />
+
+
+
+
+# 13. What is the difference between service registry and service discovery?
 
 | Aspect | Service Registry | Service Discovery |
 |--------|------------------|-------------------|
