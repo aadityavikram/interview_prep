@@ -678,4 +678,66 @@ com.example.MyAutoConfiguration
 
 
 
-# 10. What is the difference between Service Registry and Service Discovery?
+# 10. What is service registry and how is it implemented in Springboot?
+1. A service registry is a database of service instances.  
+    a. Each service registers itself (name + host + port).  
+    b. Other services discover them dynamically.  
+    c. The registry also performs health checks to remove dead instances.  
+2. This enables service discovery, so services can find each other without hardcoding URLs.  
+3. Popular registries:  
+    a. Netflix Eureka (Spring Cloud Netflix)  
+    b. Consul  
+    c. Zookeeper  
+    d. Kubernetes Service Registry  
+4. Service Registry in Spring Boot (Eureka Example)  
+    a. Create Eureka Server (Service Registry)
+
+```java
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+</dependency>
+```
+```java
+@SpringBootApplication
+@EnableEurekaServer   // marks this as Eureka server
+public class EurekaServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaServerApplication.class, args);
+    }
+}
+```
+```yml
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+```
+
+    b. Start this → Eureka dashboard at http://localhost:8761.
+<br />
+<br />
+<br />
+
+
+
+
+
+# 11. 
+
+<br />
+<br />
+<br />
+
+
+
+
+
+12. 
+
+<br />
+<br />
+<br />
