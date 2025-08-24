@@ -160,7 +160,19 @@ public Object checkRole(ProceedingJoinPoint joinPoint, RoleCheck roleCheck) thro
     return joinPoint.proceed();
 }
 ```
-
+4. Meta-Annotations (Composed Annotations) - You can combine multiple annotations into one custom annotation.
+```java
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@RestController
+@RequestMapping("/api")
+public @interface ApiController {
+}
+```
+```java
+@ApiController
+public class UserController { ... }
+```
 
 
 
