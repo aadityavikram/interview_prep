@@ -715,7 +715,7 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-```
+```  
 
     b. Start this → Eureka dashboard at http://localhost:8761.
 <br />
