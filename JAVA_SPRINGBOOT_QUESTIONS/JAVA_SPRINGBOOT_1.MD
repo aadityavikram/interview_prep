@@ -546,7 +546,55 @@ public class MyThreadScopedBean {
 
 
 # 8. @SpringBootApplication annotation
+1. It’s a meta-annotation (a combination of multiple annotations) that makes bootstrapping and configuration easier.  
+2. It is shorthand for three annotations  
+    a. @Configuration  
+    b. @EnableAutoConfiguration  
+    c. @ComponentScan  
+3. @Configuration  
+    a. Marks the class as a source of bean definitions.  
+    b. Equivalent to writing a traditional @Configuration class with @Bean methods.  
+```java
+@Configuration
+public class AppConfig {
+    @Bean
+    public MyService myService() {
+        return new MyService();
+    }
+}
+```
+4. @EnableAutoConfiguration  
+    a. Tells Spring Boot to automatically configure beans based on dependencies on the classpath.  
+    b. Example  
 
+    | Col 1 | Col 2 |
+    |-------|-------|
+    | If spring-boot-starter-web is present | Sets up Tomcat, DispatcherServlet, Jackson, etc. |
+    | If spring-boot-starter-data-jpa is present | Sets up EntityManagerFactory, DataSource, Hibernate. |
+
+    c. You can exclude specific auto-configurations  
+```java
+@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
+public class MyApp { ... }
+```
+5. @ComponentScan  
+    a. Tells Spring to scan for components (@Component, @Service, @Repository, @Controller, etc.) in the package of the main class and its subpackages.  
+```java
+@SpringBootApplication
+public class MyApp {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+}
+```
+    b. If MyApp is in com.example, Spring will scan com.example.*
+```java
+@SpringBootApplication(scanBasePackages = {"com.example.services", "com.example.repositories"})
+```
+6. Extra Features  
+    a. Provides a default main class for Spring Boot apps.  
+    b. Works seamlessly with SpringApplication.run() to bootstrap the app.  
+    c. Lets you configure auto-configuration exclusions, scan base packages, etc.  
 <br />
 <br />
 <br />
