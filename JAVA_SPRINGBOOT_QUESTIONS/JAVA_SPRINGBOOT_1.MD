@@ -173,6 +173,92 @@ public @interface ApiController {
 @ApiController
 public class UserController { ... }
 ```
+<br />
+<br />
+<br />
+
+
+
+
+# 3. Caching in Springboot
+1. Enable Caching - First, enable caching in your Spring Boot application
+```java
+@SpringBootApplication
+@EnableCaching
+public class MyApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+```
+2. Use Cache Annotations - @Cacheable - Stores the result of a method call in cache.
+```java
+@Service
+public class BookService {
+
+    @Cacheable("books")   // cache name = "books"
+    public Book getBookByIsbn(String isbn) {
+        simulateSlowService(); // expensive DB/API call
+        return new Book(isbn, "Some Book");
+    }
+
+    private void simulateSlowService() {
+        try { Thread.sleep(3000L); } catch (InterruptedException e) { e.printStackTrace(); }
+    }
+}
+```
+3. @CachePut - Always executes the method and updates the cache with the new value.
+```java
+@CachePut(value = "books", key = "#book.isbn")
+public Book updateBook(Book book) {
+    return bookRepository.save(book);
+}
+```
+4. @CacheEvict - Removes an entry from cache.
+```java
+@CacheEvict(value = "books", key = "#isbn")
+public void deleteBook(String isbn) {
+    bookRepository.deleteByIsbn(isbn);
+}
+```
+5. Clear all entries
+```java
+@CacheEvict(value = "books", allEntries = true)
+public void clearCache() { }
+```
+6. @Caching - Combine multiple caching rules.
+```java
+@Caching(
+    put = { @CachePut(value = "books", key = "#book.isbn") },
+    evict = { @CacheEvict(value = "bookList", allEntries = true) }
+)
+public Book saveBook(Book book) {
+    return bookRepository.save(book);
+}
+```
+S7. upported Cache Providers: -
+    a. Simple (default) → Uses a ConcurrentHashMap (in-memory, good for testing)
+    b. Ehcache
+    c. Caffeine (modern, high-performance in-memory cache)
+    d. Hazelcast
+    e. Redis (distributed cache, best for scaling)
+    f. JCache (JSR-107)
+```java
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+```
+```java
+spring.cache.type=redis
+spring.redis.host=localhost
+spring.redis.port=6379
+```
+8. Custom Cache Key - By default, Spring uses method parameters as keys. You can define custom keys with SpEL
+```java
+@Cacheable(value = "books", key = "#isbn.concat('-').concat(#locale)")
+public Book getBookByIsbn(String isbn, String locale) { ... }
+```
 
 
 
