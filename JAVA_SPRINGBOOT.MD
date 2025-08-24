@@ -1,7 +1,7 @@
 ### How to handle multiple beans in Springboot?
 | S.No. | Answer | Example |
 |-------|--------|---------|
-| 1 | Use @Primary - Mark one of the beans as the default bean for autowiring | ```java [] @Configuration
+| 1 | Use @Primary - Mark one of the beans as the default bean for autowiring | ```java @Configuration
 public class AppConfig {
 
     @Bean
