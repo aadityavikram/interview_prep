@@ -270,8 +270,6 @@ public Book getBookByIsbn(String isbn, String locale) { ... }
 2. Synchronous Communication (Direct, Real-time) - One service calls another and waits for a response.  
     a. Common ways: -  
 
-    | Col 1 | Col 2 |
-    |-----|---------|
     | REST (HTTP) | Most common approach. |
     | | Uses @RestController in Spring Boot. |
     | gRPC (HTTP/2, binary protocol) | Faster, strongly typed, supports streaming. |
