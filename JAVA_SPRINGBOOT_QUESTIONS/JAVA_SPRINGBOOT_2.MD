@@ -916,6 +916,16 @@ f. Use .intern() to force pooling.
 <br />
 <br />
 
+# 17. String vs StringBuilder vs StringBuffer
 
+| Feature           | **String**             | **StringBuilder**    | **StringBuffer**             |
+| ----------------- | ---------------------- | -------------------- | ---------------------------- |
+| **Mutability**    |  Immutable             |  Mutable             |  Mutable                     |
+| **String Pool**   |  Uses pool             |  No pool             |  No pool                     |
+| **Thread Safety** | N/A (immutable = safe) |  Not thread-safe     |  Thread-safe (synchronized)  |
+| **equals()**      |  Compares content      |  Compares reference  |  Compares reference          |
+| **Performance**   | Medium                 | Fast (no sync)       | Slower (sync overhead)       |
 
-
+<br />
+<br />
+<br />
