@@ -45,12 +45,13 @@ The Saga pattern is used in microservices to handle distributed, long-running tr
   b. Non-Idempotent Operation: Multiple identical requests → changes the state each time.  
 
 3. Examples: -  
-  a. Idempotent Request  
-    GET /order/123 → Always returns the same order details, no matter how many times you call it.  
-    PUT /order/123/status { "status": "CANCELLED" } → Calling it once or ten times results in the order being cancelled once.  
-  b. Non-Idempotent Request  
-    POST /order → Creates a new order each time.  
-    Calling it multiple times creates multiple orders.
+
+  | Request | Example |
+  |---------|---------|
+  | Idempotent Request | GET /order/123 → Always returns the same order details, no matter how many times you call it. |
+  | | PUT /order/123/status { "status": "CANCELLED" } → Calling it once or ten times results in the order being cancelled once. |
+  | Non-Idempotent Request | POST /order → Creates a new order each time. |
+  | | Calling it multiple times creates multiple orders. |
 
 4. Why It’s Important in Microservices?  
   a. Retries: If a request times out, the client may retry → server must not duplicate side effects.  
@@ -58,18 +59,15 @@ The Saga pattern is used in microservices to handle distributed, long-running tr
   c. Consistency: Helps maintain correct system state in distributed workflows (like Sagas).
 
 5. How to Ensure Idempotency  
-  a. Idempotency Keys  
-    Client sends a unique ID with the request (X-Idempotency-Key: abc123).  
-    Server stores processed keys to prevent duplicate processing.  
-  b. Design APIs Properly  
-    Use PUT and DELETE (naturally idempotent) instead of POST where possible.  
-  c. Example:-  
-    PUT /payment/txn123 → Processes payment for transaction txn123 only once.  
-    Retry won’t create a new payment.  
-  d. Idempotent Message Handlers  
-    Store message IDs that have already been processed to avoid re-processing duplicates.  
-  e. Compensating Transactions  
-    For non-idempotent operations, use compensating logic in case of duplicate execution.
 
-6. In short:-  
-  Idempotency in microservices ensures safe retries and duplicate handling by making sure repeated requests don’t cause unintended side effects.
+  | Method | Example |
+  |--------|---------|
+  | Idempotency Keys | Client sends a unique ID with the request (X-Idempotency-Key: abc123). |
+  | | Server stores processed keys to prevent duplicate processing. |
+  | Design APIs Properly | Use PUT and DELETE (naturally idempotent) instead of POST where possible. |
+  | Example | PUT /payment/txn123 → Processes payment for transaction txn123 only once. |
+  | | Retry won’t create a new payment. |
+  | Idempotent Message Handlers | Store message IDs that have already been processed to avoid re-processing duplicates. |
+  | Compensating Transactions  | For non-idempotent operations, use compensating logic in case of duplicate execution. |
+
+6. In short, Idempotency in microservices ensures safe retries and duplicate handling by making sure repeated requests don’t cause unintended side effects.
