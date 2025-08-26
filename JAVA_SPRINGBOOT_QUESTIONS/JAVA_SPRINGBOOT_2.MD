@@ -572,7 +572,7 @@ class Example {
     }
 }
 ```
-This may result in an infinite loop, because Thread-1 never sees flag = true.  
+This may result in an infinite loop, because Thread-1 never sees flag = true as main thread will execute flag = true but Thread-1 will never see updated value of flag.  
 
   b. With volatile  
 ```java
@@ -590,7 +590,7 @@ class Example {
     }
 }
 ```
-Now Thread-1 will see the updated value and exit the loop.  
+Now Thread-1 will see the updated value and exit the loop because main thread will execute flag = true as Thread-1 will see updated value of flag.  
 
 5. When to Use volatile  
   a. Flags / status indicators shared between threads (boolean isRunning).  
