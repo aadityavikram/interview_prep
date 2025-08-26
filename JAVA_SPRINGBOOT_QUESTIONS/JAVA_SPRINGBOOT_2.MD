@@ -722,7 +722,19 @@ Works the same way as StringBuffer but without synchronization. Much faster in s
   a. If one thread is modifying the string → use StringBuilder (better performance).  
   b. If multiple threads may modify at the same time → use StringBuffer (thread-safe).  
 
-4. Summary  
+4. Why is StringBuffer thread-safe?  
+  a. StringBuffer is thread-safe because all of its mutating methods are synchronized. This means only one thread can modify a StringBuffer object at a time, preventing race conditions and data corruption. However, this synchronization comes with a performance cost, which is why StringBuilder (non-synchronized) was introduced in Java 5 for single-threaded use cases.  
+  b. If you look at the source code of StringBuffer.append() (Java 8+)
+```java
+@Override
+public synchronized StringBuffer append(String str) {
+    toStringCache = null;
+    super.append(str);
+    return this;
+}
+```
+
+5. Summary  
   - a. Both StringBuffer and StringBuilder are mutable classes (unlike String, which is immutable).  
   - b. The only real difference:  
     - 1. StringBuffer is synchronized (thread-safe, but slower).  
