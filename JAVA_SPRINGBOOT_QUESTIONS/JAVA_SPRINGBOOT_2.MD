@@ -279,4 +279,132 @@ b. LinkedList → Better for frequent insertions/deletions.
 
 
 
-# 6. 
+# 6. Difference between HashMap and ConcurrentHashMap in Java?
+
+| Feature                      | **HashMap**                                                                                              | **ConcurrentHashMap**                                                                                               |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Thread-safety**            | Not thread-safe (can cause data inconsistency if used by multiple threads)                               | Thread-safe (designed for concurrent access)                                                                        |
+| **Null Keys/Values**         | Allows **one `null` key** and multiple `null` values                                                     | Does **not allow null keys or null values**                                                                         |
+| **Performance**              | Faster in single-threaded applications                                                                   | Slightly slower due to synchronization overhead, but much faster than using `Collections.synchronizedMap()`         |
+| **Fail-fast behavior**       | Iterator is **fail-fast** → throws `ConcurrentModificationException` if map is modified during iteration | Iterator is **fail-safe** → does **not throw exception**, it works on a snapshot of the data                        |
+| **Internal Synchronization** | No synchronization, multiple threads can corrupt data                                                    | Uses **segment-level (Java 7)** or **bucket-level (Java 8)** locking → multiple threads can read/write concurrently |
+| **Use case**                 | Good for single-threaded or read-mostly scenarios                                                        | Best for multi-threaded environments where many threads read/write simultaneously                                   |
+
+```java
+import java.util.*;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "A");
+        map.put(2, "B");
+        map.put(null, "C"); // allows one null key
+        map.put(3, null);   // allows null value
+        System.out.println(map);
+    }
+}
+```
+```java
+import java.util.concurrent.*;
+
+public class ConcurrentHashMapExample {
+    public static void main(String[] args) {
+        ConcurrentHashMap<Integer, String> cmap = new ConcurrentHashMap<>();
+        cmap.put(1, "A");
+        cmap.put(2, "B");
+        // cmap.put(null, "C"); // Not allowed, throws NullPointerException
+        // cmap.put(3, null);   // Not allowed
+        System.out.println(cmap);
+    }
+}
+```
+Summary: -  
+  a. Use HashMap → when working in single-threaded apps (or if external synchronization is added manually).  
+  b. Use ConcurrentHashMap → when working in multi-threaded environments, to avoid ConcurrentModificationException and data corruption.  
+<br />
+<br />
+<br />
+
+
+
+# 7. Explain internal working of HashMap
+1. Data Structure Used. In Java 8+, HashMap is implemented using:-  
+  a. Array of Nodes (buckets)  
+  b. Each Node stores: key, value, hash, next (link to next node) 
+  c. If many collisions happen → LinkedList turns into a Balanced Tree (Red-Black Tree) for faster lookups.  
+
+So structure is:
+```java
+HashMap = Array[Node]
+Node = {hash, key, value, next}
+```
+
+2. How Put Works (map.put(key, value))  
+
+  | Step | Col 1 | Col 2 |
+  |------|-------|-------|
+  | Hashing | Compute hash = hashCode(key) | |
+  | | Apply internal hash function to reduce collisions. | |
+  | Index Calculation | Index = (n - 1) & hash → where n = array size. | |
+  | | This ensures values fall within bucket range. | |
+  | Insert Logic | If bucket is empty → | create new Node and insert. |
+  | | If bucket already has nodes → | |
+  | | Compare key with existing: | |
+  | | | If same key → overwrite value. |
+  | | | If different key but same bucket → collision! |
+  | | | Add new node at end of LinkedList (Java 7) / front (Java 8). |
+  | | | If chain length > 8 → convert to Red-Black Tree for O(log n) search. |
+
+3. How Get Works (map.get(key))
+
+  | Step | Col 1 |
+  |------|-------|
+  | Compute hash of key → | find bucket index. |
+  | Traverse bucket: | If only one node → return value. |
+  | | If multiple nodes (LinkedList/Tree) → compare keys using equals(). |
+  | Return value if found, else null. | |
+
+4. Handling Collisions  
+  a. Collisions happen when different keys produce the same bucket index.  
+  b. Handled using chaining (LinkedList → Red-Black Tree if too many).  
+
+5. Rehashing (Resize)  
+  a. Default capacity = 16, Load Factor = 0.75.  
+  b. Threshold = capacity × load factor = 16 × 0.75 = 12.  
+  c. When size > threshold → resize array (double the size).  
+  d. All existing keys are rehashed into new buckets.  
+
+6. Null Keys/Values  
+  a. HashMap allows one null key (always stored at bucket index 0).  
+  b. Allows multiple null values.  
+
+7. Example
+```java
+HashMap<String, Integer> map = new HashMap<>();
+map.put("John", 25);
+map.put("Alex", 30);
+map.put("John", 28); // overwrites value
+```
+
+  a. "John".hashCode() → hashed → bucket index → insert Node(John, 25).  
+  b. "Alex".hashCode() → different index → insert Node(Alex, 30).  
+  c. "John" again → hash matches → same bucket → key equals → overwrite value with 28.  
+
+8. Performance  
+  a. Best case: O(1) for put/get.  
+  b. Worst case: O(log n) if tree, O(n) if LinkedList.  
+  c. With good hash function → near O(1) average.  
+
+9. Summary  
+  a. HashMap uses array + linked list/tree.  
+  b. Uses hashing to find bucket.  
+  c. Handles collisions with chaining (LinkedList → Tree).  
+  d. Expands via rehashing when load factor exceeds threshold.  
+
+<br />
+<br />
+<br />
+
+
+
+
