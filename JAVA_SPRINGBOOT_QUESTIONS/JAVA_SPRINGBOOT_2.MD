@@ -234,4 +234,48 @@ class Dog extends Animal {
 
 
 
-# 5. 
+# 5. ArrayList vs LinkedList
+
+| Feature                                 | **ArrayList**                              | **LinkedList**                                             |
+| --------------------------------------- | ------------------------------------------ | ---------------------------------------------------------- |
+| **Underlying structure**                | Dynamic array                              | Doubly linked list                                         |
+| **Access (get/set by index)**           | Fast (O(1))                                | Slow (O(n)) — must traverse nodes                          |
+| **Insertion/Deletion (middle of list)** | Slow (O(n)) — requires shifting elements   | Fast (O(1)) — just change pointers                         |
+| **Insertion at end**                    | Amortized O(1)                             | O(1)                                                       |
+| **Memory usage**                        | Less (stores only values)                  | More (stores values + two references per node: prev, next) |
+| **Iteration**                           | Faster (cache-friendly)                    | Slower (cache misses due to scattered memory)              |
+| **Best for**                            | Read-heavy operations, random access       | Write-heavy operations, frequent inserts/deletes in middle |
+
+1. Use ArrayList when:-  
+  a. You need fast random access (get/set by index).  
+  b. Your application is read-heavy (lots of lookups, fewer insertions/deletions).  
+  c. Example: Storing employee records where you mostly search by index.
+
+```java
+List<String> list = new ArrayList<>();
+list.add("A");
+list.add("B");
+System.out.println(list.get(1)); // Fast O(1)
+```
+
+2. Use LinkedList when:-  
+  a. You need fast insertions and deletions in the middle or beginning of the list.  
+  b. You don’t need frequent random access.  
+  c. Example: Implementing a queue or playlist where elements are frequently added/removed.
+
+```java
+List<String> list = new LinkedList<>();
+list.add("A");
+list.add("B");
+list.add(1, "C"); // Insert in middle is fast O(1)
+```
+
+3. Rule of Thumb  
+a. ArrayList → Better for searching and accessing elements.  
+b. LinkedList → Better for frequent insertions/deletions.
+<br />
+<br />
+<br />
+
+
+
