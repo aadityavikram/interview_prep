@@ -746,8 +746,84 @@ public synchronized StringBuffer append(String str) {
 
 
 
+# 14. StringBuilder vs StringBuffer multi-threading demo
+```java
+public class BuilderVsBufferDemo {
+    public static void main(String[] args) throws InterruptedException {
 
-# 14. == vs equals
+        // StringBuilder (NOT thread-safe)
+        StringBuilder sbuilder = new StringBuilder("Start");
+        Runnable task1 = () -> {
+            for (int i = 0; i < 1000; i++) {
+                sbuilder.append("A");
+            }
+        };
+        Runnable task2 = () -> {
+            for (int i = 0; i < 1000; i++) {
+                sbuilder.append("B");
+            }
+        };
+
+        Thread t1 = new Thread(task1);
+        Thread t2 = new Thread(task2);
+        t1.start();
+        t2.start();
+        t1.join();
+        t2.join();
+
+        System.out.println("StringBuilder length = " + sbuilder.length());
+        // Expected 2005 (Start + 1000A + 1000B) but often smaller/garbled
+
+        // StringBuffer (thread-safe)
+        StringBuffer sbuffer = new StringBuffer("Start");
+        Runnable task3 = () -> {
+            for (int i = 0; i < 1000; i++) {
+                sbuffer.append("A");
+            }
+        };
+        Runnable task4 = () -> {
+            for (int i = 0; i < 1000; i++) {
+                sbuffer.append("B");
+            }
+        };
+
+        Thread t3 = new Thread(task3);
+        Thread t4 = new Thread(task4);
+        t3.start();
+        t4.start();
+        t3.join();
+        t4.join();
+
+        System.out.println("StringBuffer length = " + sbuffer.length());
+        // Always correct: 2005
+    }
+}
+```
+
+1. StringBuilder case:  
+  a. Both threads (t1, t2) are appending to the same builder.  
+  b. Since it’s not synchronized, sometimes they overwrite each other’s writes.  
+  c. Result: corrupted buffer or wrong length (e.g., 1980 instead of 2005).  
+
+2. StringBuffer case:  
+  a. Same scenario, but all methods (append, insert, etc.) are synchronized.  
+  b. Only one thread modifies at a time.  
+  c. Result: always correct length = 2005.  
+
+3. Conclusion:  
+  a. Use StringBuilder in single-threaded situations (faster).  
+  b. Use StringBuffer in multi-threaded situations (safe but slower).  
+
+<br />
+<br />
+<br />
+
+
+
+
+
+
+# 15. == vs equals
 
 | Operator / Method | What it Checks                                                                         | Works On                                     | Example Output                                                             |
 | ----------------- | -------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
@@ -797,7 +873,7 @@ public class Test {
 
 
 
-# 15. String Pool in Java
+# 16. String Pool in Java
 
 1. What is it?  
   a. The String pool is a special area inside the Java heap (in Method Area / Metaspace depending on JVM).  
@@ -865,7 +941,8 @@ public class Test {
 
 
 
-# 16. String Pool vs Heap
+# 17. String Pool vs Heap
+
 1. Suppose we write:  
 ```java
 String s1 = "Hello";
@@ -916,7 +993,7 @@ f. Use .intern() to force pooling.
 <br />
 <br />
 
-# 17. String vs StringBuilder vs StringBuffer
+# 18. String vs StringBuilder vs StringBuffer
 
 | Feature           | **String**             | **StringBuilder**    | **StringBuffer**             |
 | ----------------- | ---------------------- | -------------------- | ---------------------------- |
