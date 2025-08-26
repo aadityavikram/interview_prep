@@ -5,9 +5,9 @@ If one step fails, the pattern ensures data consistency by executing compensatin
 
 2. Key Concepts of Saga Pattern:
 
-Local Transactions - Each service executes a transaction that updates its database and then triggers the next service.  
-Compensating Transactions - If a failure occurs, previously executed transactions are undone using compensating actions.  
-Event/Message Driven - Saga relies on messages/events to coordinate between services.
+  a. Local Transactions - Each service executes a transaction that updates its database and then triggers the next service.  
+  b. Compensating Transactions - If a failure occurs, previously executed transactions are undone using compensating actions.  
+  c. Event/Message Driven - Saga relies on messages/events to coordinate between services.
 
 3. Two Main Saga Implementations: -  
 
