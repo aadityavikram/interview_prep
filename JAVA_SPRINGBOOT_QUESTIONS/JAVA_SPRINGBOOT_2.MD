@@ -749,3 +749,44 @@ public synchronized StringBuffer append(String str) {
 
 # 14. == vs equals
 
+| Operator / Method | What it Checks                                                                         | Works On                                     | Example Output                                                             |
+| ----------------- | -------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
+| `==`              | **Reference equality** → whether two references point to the **same object in memory** | All objects                                  | `"abc" == "abc"` → `true` (because both point to the same interned string) |
+| `.equals()`       | **Content equality** → whether the values inside the objects are the same              | Overridden in `String` to compare characters | `"abc".equals("abc")` → `true`                                             |
+
+1. Example: == (Reference Comparison)  
+```java
+public class Test {
+    public static void main(String[] args) {
+        String s1 = "Hello";         // String literal → stored in String pool
+        String s2 = "Hello";         // Refers to same pool object
+        String s3 = new String("Hello"); // New object in heap, not pool
+
+        System.out.println(s1 == s2); // true (same reference from pool)
+        System.out.println(s1 == s3); // false (different objects)
+    }
+}
+```
+
+2. Example: .equals() (Content Comparison)  
+```java
+public class Test {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = new String("Hello");
+
+        System.out.println(s1.equals(s2)); // true (same content "Hello")
+    }
+}
+```
+
+3. Why the Difference?  
+  a. String in Java overrides .equals() from Object class.  
+  b. In Object, .equals() = reference equality (same as ==).  
+  c. But in String, .equals() is overridden to compare the sequence of characters.  
+
+4. Summary  
+  a. == checks if two references point to the same memory object.  
+  b. .equals() checks if two strings have the same content.  
+  c. With string literals (interning), sometimes == returns true because JVM reuses string objects from the String pool.  
+  d. Always use .equals() when comparing string values.  
