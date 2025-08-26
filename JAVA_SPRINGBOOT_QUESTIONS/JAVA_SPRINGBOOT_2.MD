@@ -555,7 +555,7 @@ In ConcurrentHashMap, resizing happens when the size exceeds the threshold (capa
     - 3. But it does not guarantee atomicity (e.g., count++ is still not thread-safe).  
 
 4. Example  
-  a. Without volatile  
+a. Without volatile  
 ```java
 class Example {
     private static boolean flag = false;
@@ -574,7 +574,7 @@ class Example {
 ```
 This may result in an infinite loop, because Thread-1 never sees flag = true.  
 
-  b. With volatile  
+b. With volatile  
 ```java
 class Example {
     private static volatile boolean flag = false;
