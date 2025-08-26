@@ -673,12 +673,12 @@ After Deserialization: User{username='Aaditya', password='null'}
 Notice: The password was not serialized → It became null after deserialization.
 
 4. Key Points  
-transient only applies to instance variables (not local or static variables).  
-If a class has a transient field and you really want to store it → you can implement custom serialization using writeObject() and readObject().  
+  a. transient only applies to instance variables (not local or static variables).  
+  b. If a class has a transient field and you really want to store it → you can implement custom serialization using writeObject() and readObject().  
 
 5. Summary  
-transient = do not serialize this variable.  
-Useful for security (passwords), performance (skip large objects), or when the field is not serializable.  
+  a. transient = do not serialize this variable.  
+  b. Useful for security (passwords), performance (skip large objects), or when the field is not serializable.  
 <br />
 <br />
 <br />
