@@ -11,4 +11,30 @@
 10. What is service registry and how is it implemented in Springboot?  
 11. What is service discovery and how is it implemented in Springboot?  
 12. @LoadBalanced annotation  
-13. What is the difference between service registry and service discovery?
+13. What is the difference between service registry and service discovery?  
+
+<br />
+
+# JAVA_SPRINGBOOT_2.MD  
+1. What is Saga design pattern?  
+2. What is Idempotency in microservice?  
+3. Super class of all java class  
+4. OOPS concept  
+5. ArrayList vs LinkedList  
+6. Difference between HashMap and ConcurrentHashMap in Java?  
+7. Explain internal working of HashMap  
+8. Internal Differences: HashMap in Java 7 vs Java 8  
+9. Explain internal working of ConcurrentHashMap  
+10. Internal Working of Resize in ConcurrentHashMap  
+11. Volatile keyword in Java  
+12. Transient keyword in Java  
+13. Difference between StringBuilder and StringBuffer  
+14. StringBuilder vs StringBuffer multi-threading demo  
+15. == vs equals  
+16. String Pool in Java  
+17. String Pool vs Heap  
+18. String vs StringBuilder vs StringBuffer  
+
+<br />
+
+
