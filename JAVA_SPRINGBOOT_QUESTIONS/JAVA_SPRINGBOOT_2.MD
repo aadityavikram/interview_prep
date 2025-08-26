@@ -71,3 +71,45 @@ The Saga pattern is used in microservices to handle distributed, long-running tr
   | Compensating Transactions  | For non-idempotent operations, use compensating logic in case of duplicate execution. |
 
 6. In short, Idempotency in microservices ensures safe retries and duplicate handling by making sure repeated requests don’t cause unintended side effects.
+<br />
+<br />
+<br />
+
+
+
+# 3. Super class of all java class
+1. Every class in Java implicitly inherits from Object (directly or indirectly).  
+```java
+class MyClass {
+    // even if you don’t write "extends Object",
+    // it automatically extends java.lang.Object
+}
+```
+2. If you don’t explicitly extend another class, the compiler automatically makes your class extend Object.  
+3. This makes Object the root class of the Java class hierarchy.  
+4. Important Methods in Object  
+  a. toString() → Returns a string representation.  
+  b. equals(Object obj) → Compares objects for equality.  
+  c. hashCode() → Returns a hash value for the object.  
+  d. getClass() → Returns runtime class information.  
+  e. clone() → Creates a copy of the object (if Cloneable).  
+  f. finalize() → Called by garbage collector before object is destroyed.  
+  g. wait(), notify(), notifyAll() → Used for thread synchronization.  
+
+5. Java Class Hierarchy
+           Object
+              ↑
+         -------------
+         |           |
+      String      Number
+                     ↑
+                 Integer, Double, etc.  
+
+6. So no matter what class you create in Java, at the very top it always inherits from java.lang.Object.
+<br />
+<br />
+<br />
+
+
+
+# 4. 
