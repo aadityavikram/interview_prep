@@ -668,9 +668,8 @@ public class TransientExample {
 Output:
 Before Serialization: User{username='Aaditya', password='mySecret123'}
 After Deserialization: User{username='Aaditya', password='null'}
-```
-
 Notice: The password was not serialized → It became null after deserialization.
+```
 
 4. Key Points  
   a. transient only applies to instance variables (not local or static variables).  
