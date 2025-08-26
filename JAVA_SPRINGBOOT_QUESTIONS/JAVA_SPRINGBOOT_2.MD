@@ -409,3 +409,23 @@ map.put("John", 28); // overwrites value
 
 
 
+# 8. Internal Differences: HashMap in Java 7 vs Java 8
+
+| Term | Java 7 | Java 8 |
+|------|--------|--------|
+| Collision Handling | Collisions handled using a LinkedList in each bucket. | Initially uses LinkedList, but if a bucket’s size > 8 and table size ≥ 64 → converts that bucket into a Red-Black Tree. |
+| | Worst-case lookup = O(n) (if all keys fall into one bucket). | This improves worst-case lookup to O(log n) instead of O(n). |
+| Insertion Order (When Collisions Occur) | New node is inserted at the head of the LinkedList. | New node is inserted at the end of the list (like a queue). |
+| | Problem: During rehashing, it could lead to infinite loops in multithreaded code (because rehashing wasn’t thread-safe). In Java 7 HashMap, rehashing during resize was not thread-safe. If multiple threads resized at the same time, the LinkedList in buckets could become corrupted and form a circular reference, leading to an infinite loop during traversal.
+This happened because Java 7 used head insertion during rehashing. In Java 8, this was fixed by using tail insertion and introducing better collision handling (LinkedList → Tree), so infinite loops don’t occur anymore. | Prevents reverse order issue and avoids infinite loop risk. |
+| Hashing Function | Used simple hash function → higher chance of collisions if hashCodes are poorly distributed. | Uses improved hash function (hash ^ (hash >>> 16)) to spread high bits into low bits. Reduces collision probability. |
+| Performance (Worst Case) | Worst case = O(n) (if many collisions form a long linked list). | Worst case = O(log n) (when linked list converts to tree). |
+
+<br />
+<br />
+<br />
+
+
+
+
+# 9. Explain internal working of ConcurrentHashMap
