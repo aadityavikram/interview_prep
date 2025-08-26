@@ -615,4 +615,76 @@ Now Thread-1 will see the updated value and exit the loop because main thread wi
 
 # 12. Transient keyword in Java
 
+1. Definition  
+  a. transient is a modifier used for instance variables.  
+  b. A transient variable is not serialized when you serialize an object.  
+  c. When the object is deserialized, the transient variable gets its default value (e.g., null for objects, 0 for numbers, false for boolean).  
+
+2. Why Do We Need It?  
+  a. Some variables should not be saved when we serialize an object:  
+  b. Sensitive data → passwords, PINs, security tokens.  
+  c. Derived values → values that can be recalculated.  
+  d. Non-serializable objects (like Thread, Socket, FileInputStream).  
+
+3. Example  
+```java
+import java.io.*;
+
+class User implements Serializable {
+    private String username;
+    private transient String password;  // will not be serialized
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{username='" + username + "', password='" + password + "'}";
+    }
+}
+
+public class TransientExample {
+    public static void main(String[] args) throws Exception {
+        User user = new User("Aaditya", "mySecret123");
+
+        // Serialize
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("user.ser"));
+        oos.writeObject(user);
+        oos.close();
+
+        // Deserialize
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("user.ser"));
+        User deserializedUser = (User) ois.readObject();
+        ois.close();
+
+        System.out.println("Before Serialization: " + user);
+        System.out.println("After Deserialization: " + deserializedUser);
+    }
+}
+```
+```java
+Output:
+Before Serialization: User{username='Aaditya', password='mySecret123'}
+After Deserialization: User{username='Aaditya', password='null'}
+```
+
+Notice: The password was not serialized → It became null after deserialization.
+
+4. Key Points  
+transient only applies to instance variables (not local or static variables).  
+If a class has a transient field and you really want to store it → you can implement custom serialization using writeObject() and readObject().  
+
+5. Summary  
+transient = do not serialize this variable.  
+Useful for security (passwords), performance (skip large objects), or when the field is not serializable.  
+<br />
+<br />
+<br />
+
+
+
+
+# 13. Difference between StringBuilder and StringBuffer
 
