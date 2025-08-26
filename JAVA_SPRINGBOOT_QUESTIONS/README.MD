@@ -1,4 +1,4 @@
-# JAVA_SPRINGBOOT_1.MD
+# [JAVA_SPRINGBOOT_1.MD][JAVA_SPRINGBOOT_1_MD_LINK]
 1. How to handle multiple beans in Springboot?  
 2. How to define custom annotation in Springboot?  
 3. Caching in Springboot  
@@ -15,7 +15,7 @@
 
 <br />
 
-# JAVA_SPRINGBOOT_2.MD  
+# [JAVA_SPRINGBOOT_2.MD][JAVA_SPRINGBOOT_2_MD_LINK]
 1. What is Saga design pattern?  
 2. What is Idempotency in microservice?  
 3. Super class of all java class  
@@ -36,5 +36,8 @@
 18. String vs StringBuilder vs StringBuffer  
 
 <br />
+
+[JAVA_SPRINGBOOT_1_MD_LINK]: /JAVA_SPRINGBOOT_QUESTIONS/JAVA_SPRINGBOOT_1.MD
+[JAVA_SPRINGBOOT_2_MD_LINK]: /JAVA_SPRINGBOOT_QUESTIONS/JAVA_SPRINGBOOT_2.MD
 
 
