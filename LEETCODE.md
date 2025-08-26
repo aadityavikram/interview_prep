@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|218| Interval List Intersections | https://leetcode.com/problems/interval-list-intersections/description/ | Medium | https://leetcode.com/problems/interval-list-intersections/solutions/7123208/java-o-n-m-solution/ |
 |217| Append Characters to String to Make Subsequence | https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/description/ | Medium | https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/solutions/7120388/java-o-n-solution/ |
 |216| Minimum Number of Flips to Make Binary Grid Palindromic I | https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/description/ | Medium | https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i/solutions/7120345/java-o-n-m-solution/ |
 |215| Maximum Matching of Players With Trainers | https://leetcode.com/problems/maximum-matching-of-players-with-trainers/description/ | Medium | https://leetcode.com/problems/maximum-matching-of-players-with-trainers/solutions/7120281/java-o-n-log-n-solution/ |
