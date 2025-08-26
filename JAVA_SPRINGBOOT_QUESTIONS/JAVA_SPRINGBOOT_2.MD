@@ -445,21 +445,21 @@ This happened because Java 7 used head insertion during rehashing. In Java 8, th
     - 4. Reads are mostly lock-free.  
     - 5. Limitation: Fixed 16 segments → scalability issue when very high concurrency.  
   
-  b. Java 8 (Bucket-level Locking + CAS)  
-    1. Removed Segments → uses a single array of Nodes (like HashMap).  
-    2. Uses CAS (Compare-And-Swap) and synchronized blocks on individual buckets instead of locking whole segments.  
-    3. Collision handling: LinkedList → Red-Black Tree (just like HashMap 8).  
-    4. Reads are almost always lock-free.  
-    5. Writes use fine-grained locking at bucket level only.  
-    6. Improvement: Much better parallelism and less memory usage than Java 7.  
+  - b. Java 8 (Bucket-level Locking + CAS)  
+    - 1. Removed Segments → uses a single array of Nodes (like HashMap).  
+    - 2. Uses CAS (Compare-And-Swap) and synchronized blocks on individual buckets instead of locking whole segments.  
+    - 3. Collision handling: LinkedList → Red-Black Tree (just like HashMap 8).  
+    - 4. Reads are almost always lock-free.  
+    - 5. Writes use fine-grained locking at bucket level only.  
+    - 6. Improvement: Much better parallelism and less memory usage than Java 7.  
 
 3. Put Operation (put(key, value))  
   a. Compute hash of the key → find bucket index.  
   b. If bucket empty → insert new Node using CAS (no lock).  
-  c. If bucket not empty → acquire lock on that bucket:  
-    1. If key exists → update value.  
-    2. If collision → add node to list/tree.  
-    3. If list > threshold (8) → convert to tree.  
+  - c. If bucket not empty → acquire lock on that bucket:  
+    - 1. If key exists → update value.  
+    - 2. If collision → add node to list/tree.  
+    - 3. If list > threshold (8) → convert to tree.  
   d. Release lock.  
   e. If map size exceeds threshold → resize (done gradually, unlike HashMap).  
 
