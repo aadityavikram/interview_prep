@@ -536,4 +536,83 @@ In ConcurrentHashMap, resizing happens when the size exceeds the threshold (capa
 
 
 # 11. Volatile keyword in Java
+1. Definition  
+  a. volatile is a modifier that can be applied to variables in Java.  
+  b. It tells the JVM and compiler that the value of this variable will be modified by multiple threads.  
+  c. It ensures visibility of changes across threads, but does not ensure atomicity.  
+
+2. Problem Without volatile  
+  a. By default, each thread may cache variables locally in CPU registers or thread stacks for performance.  
+  b. So if Thread A updates a variable, Thread B might not immediately see the updated value (because it’s still reading from its local cached copy).  
+
+3. What volatile Does    
+  - a. Visibility guarantee:  
+    - 1. Any read of a volatile variable always sees the most recent write by any thread.  
+    - 2. JVM flushes changes to main memory immediately.  
+  - b. Ordering guarantee:  
+    - 1. Prevents certain kinds of compiler/JIT reordering of reads/writes.  
+    - 2. Ensures happens-before relationship for reads/writes on that variable.  
+    - 3. But it does not guarantee atomicity (e.g., count++ is still not thread-safe).  
+
+4. Example  
+  a. Without volatile  
+```java
+class Example {
+    private static boolean flag = false;
+
+    public static void main(String[] args) throws InterruptedException {
+        new Thread(() -> {
+            while (!flag) {  // may never see flag = true!
+            }
+            System.out.println("Flag changed!");
+        }).start();
+
+        Thread.sleep(1000);
+        flag = true;  // change may not be visible to other thread
+    }
+}
+```
+This may result in an infinite loop, because Thread-1 never sees flag = true.  
+
+  b. With volatile  
+```java
+class Example {
+    private static volatile boolean flag = false;
+
+    public static void main(String[] args) throws InterruptedException {
+        new Thread(() -> {
+            while (!flag) { }
+            System.out.println("Flag changed!");
+        }).start();
+
+        Thread.sleep(1000);
+        flag = true; // visible to other thread immediately
+    }
+}
+```
+Now Thread-1 will see the updated value and exit the loop.  
+
+5. When to Use volatile  
+  a. Flags / status indicators shared between threads (boolean isRunning).  
+  b. Singleton pattern with double-checked locking.  
+  c. When you need visibility of variable changes but not atomicity.  
+
+6. When NOT to Use volatile  
+  a. When multiple operations must be performed atomically (like count++, balance--).  
+  b. For those → use synchronized or Atomic classes (AtomicInteger, AtomicBoolean, etc.).  
+
+7. Summary  
+  a. volatile ensures visibility & ordering of a variable across threads.  
+  b. It does not make operations atomic.  
+  c. Best for flags and simple state checks.  
+  d. For atomic updates, use synchronized or java.util.concurrent.atomic package.  
+
+<br />
+<br />
+<br />
+
+
+
+# 12. Transient keyword in Java
+
 
