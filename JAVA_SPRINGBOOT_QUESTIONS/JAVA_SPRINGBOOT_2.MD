@@ -790,3 +790,70 @@ public class Test {
   b. .equals() checks if two strings have the same content.  
   c. With string literals (interning), sometimes == returns true because JVM reuses string objects from the String pool.  
   d. Always use .equals() when comparing string values.  
+
+<br />
+<br />
+<br />
+
+
+
+# 15. String Pool in Java
+
+1. What is it?  
+  a. The String pool is a special area inside the Java heap (in Method Area / Metaspace depending on JVM).  
+  b. JVM maintains a cache of String literals there.  
+  c. If two String literals have the same value, they are made to point to the same object in the pool (to save memory).  
+
+2. Example: String Literals (Interning)  
+```java
+public class Test {
+    public static void main(String[] args) {
+        String s1 = "Hello";  // goes into String pool
+        String s2 = "Hello";  // refers to the same pool object
+
+        System.out.println(s1 == s2);      // true (same reference)
+        System.out.println(s1.equals(s2)); // true (same content)
+    }
+}
+```
+Both s1 and s2 point to the same pool object → so == is true.
+
+3. Example: new String()  
+```java
+public class Test {
+    public static void main(String[] args) {
+        String s1 = "Hello";               
+        String s2 = new String("Hello");   // forces a new object in heap
+
+        System.out.println(s1 == s2);      // false (different references)
+        System.out.println(s1.equals(s2)); // true (same content)
+    }
+}
+```
+```java
+Even though both have "Hello" as content,
+s1 → points to String pool.
+s2 → points to a new heap object.
+So == is false but .equals() is true.
+```
+
+4. Forcing Pooling with .intern()  
+```java
+public class Test {
+    public static void main(String[] args) {
+        String s1 = new String("Hello");
+        String s2 = s1.intern();  // returns reference from String pool
+        String s3 = "Hello";
+
+        System.out.println(s1 == s2); // false (s1 is heap, s2 is pool)
+        System.out.println(s2 == s3); // true (both from pool)
+    }
+}
+```
+.intern() → ensures the string reference is from the pool.
+
+5. Summary  
+  a. String literals are automatically interned → stored in the String pool.  
+  b. When you write "abc" == "abc", both refer to the same pool object → == returns true.  
+  c. When you write new String("abc"), a new object is created in heap → == returns false even though .equals() is true.  
+  d. Use .intern() if you want heap strings to be moved into the pool.  
