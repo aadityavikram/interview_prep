@@ -431,3 +431,59 @@ This happened because Java 7 used head insertion during rehashing. In Java 8, th
 
 
 # 9. Explain internal working of ConcurrentHashMap
+
+1. Purpose  
+  a. Unlike HashMap (not thread-safe) and Hashtable (thread-safe but locks the whole map = slow).  
+  b. ConcurrentHashMap provides a thread-safe, high-performance map by allowing concurrent reads and writes with minimal locking.  
+
+2. Internal Design (Java 7 vs Java 8)  
+
+  a. Java 7 (Segmented Locking)  
+    1. Internally divided into segments (default = 16).  
+    2. Each segment is like a smaller HashMap with its own lock.  
+    3. Multiple threads can write to different segments concurrently.  
+    4. Reads are mostly lock-free.  
+    5. Limitation: Fixed 16 segments → scalability issue when very high concurrency.  
+  
+  b. Java 8 (Bucket-level Locking + CAS)  
+    1. Removed Segments → uses a single array of Nodes (like HashMap).  
+    2. Uses CAS (Compare-And-Swap) and synchronized blocks on individual buckets instead of locking whole segments.  
+    3. Collision handling: LinkedList → Red-Black Tree (just like HashMap 8).  
+    4. Reads are almost always lock-free.  
+    5. Writes use fine-grained locking at bucket level only.  
+    6. Improvement: Much better parallelism and less memory usage than Java 7.  
+
+3. Put Operation (put(key, value))  
+  a. Compute hash of the key → find bucket index.  
+  b. If bucket empty → insert new Node using CAS (no lock).  
+  c. If bucket not empty → acquire lock on that bucket:  
+    1. If key exists → update value.  
+    2. If collision → add node to list/tree.  
+    3. If list > threshold (8) → convert to tree.  
+  d. Release lock.  
+  e. If map size exceeds threshold → resize (done gradually, unlike HashMap).  
+
+4. Get Operation (get(key))  
+  a. Compute hash → find bucket index.  
+  b. Traverse bucket (LinkedList or Tree).  
+  c. Return value.  
+  d. No lock needed for reads (volatile reads ensure visibility).  
+
+5. Key Features  
+  a. Thread-safe: Multiple threads can safely access/modify.  
+  b. High Performance: Uses fine-grained locking and CAS instead of global lock.  
+  c. Fail-safe Iterators: Iterator does not throw ConcurrentModificationException. Instead, it iterates over a snapshot of data (weakly consistent).  
+  d. No nulls: Does not allow null keys or null values (to avoid ambiguity in multi-threaded access).  
+
+6. Performance (Time Complexity)  
+  a. Average: O(1) for put/get.  
+  b. Worst-case: O(log n) (if collisions turn into trees).  
+
+<br />
+<br />
+<br />
+
+
+
+
+# 10. 
