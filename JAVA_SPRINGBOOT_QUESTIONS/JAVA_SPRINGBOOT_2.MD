@@ -438,12 +438,12 @@ This happened because Java 7 used head insertion during rehashing. In Java 8, th
 
 2. Internal Design (Java 7 vs Java 8)  
 
-  a. Java 7 (Segmented Locking)  
-    * Internally divided into segments (default = 16).  
-    * Each segment is like a smaller HashMap with its own lock.  
-    * Multiple threads can write to different segments concurrently.  
-    * Reads are mostly lock-free.  
-    * Limitation: Fixed 16 segments → scalability issue when very high concurrency.  
+  - a. Java 7 (Segmented Locking)  
+    - 1. Internally divided into segments (default = 16).  
+    - 2. Each segment is like a smaller HashMap with its own lock.  
+    - 3. Multiple threads can write to different segments concurrently.  
+    - 4. Reads are mostly lock-free.  
+    - 5. Limitation: Fixed 16 segments → scalability issue when very high concurrency.  
   
   b. Java 8 (Bucket-level Locking + CAS)  
     1. Removed Segments → uses a single array of Nodes (like HashMap).  
