@@ -321,6 +321,7 @@ public class ConcurrentHashMapExample {
 Summary: -  
   a. Use HashMap → when working in single-threaded apps (or if external synchronization is added manually).  
   b. Use ConcurrentHashMap → when working in multi-threaded environments, to avoid ConcurrentModificationException and data corruption.  
+
 <br />
 <br />
 <br />
