@@ -486,4 +486,54 @@ This happened because Java 7 used head insertion during rehashing. In Java 8, th
 
 
 
-# 10. 
+# 10. Internal Working of Resize in ConcurrentHashMap
+
+1. When Does Resize Happen?  
+  a. ConcurrentHashMap (like HashMap) resizes when size > threshold.  
+  b. Threshold = capacity × loadFactor (default loadFactor = 0.75).  
+  c. Capacity starts at 16 and doubles each time.  
+
+2. Problem with Simple Resizing  
+  a. In HashMap, resizing is a stop-the-world operation: copy all buckets into a new table.  
+  b. In ConcurrentHashMap, this would block all threads → bad for concurrency.  
+  c. So instead, ConcurrentHashMap uses gradual, cooperative resizing.  
+
+3. How Resizing Works (Java 8)  
+  - a. Trigger  
+    - 1. A thread doing put() sees that size > threshold.  
+    - 2. It tries to resize by creating a new table of double the size.  
+  - b. Forwarding Node (ForwardingNode)  
+    - 1. The bucket being resized is replaced by a special marker node (ForwardingNode).  
+    - 2. Any thread that comes across this node knows "this bucket has been moved".  
+    - 3. Instead of inserting there, the thread will redirect to the new table.  
+  - c. Cooperative Resizing  
+    - 1. Multiple threads can help with rehashing.  
+    - 2. Each thread rehashes only a small chunk of buckets → less blocking.  
+    - 3. This work-stealing approach distributes resizing among threads.  
+  - d. Gradual Migration  
+    - 1. Not all buckets are rehashed immediately.  
+    - 2. If a bucket is not yet moved, accessing it will trigger on-demand rehashing for that bucket.  
+
+4. Example Flow  
+Imagine capacity = 16, threshold = 12.  
+  a. Map size grows to 13 → resize triggered.  
+  b. New table of size 32 created.  
+  c. Bucket[5] is being moved → replaced with ForwardingNode.  
+  d. Any thread accessing Bucket[5] will be forwarded to new table.  
+  e. Resizing continues in chunks until all buckets are migrated.  
+
+5. Key Advantages  
+  a. Non-blocking: Reads and writes can continue while resizing happens.  
+  b. Multi-threaded cooperation: Multiple threads can share the resize work.  
+  c. Forwarding node ensures consistency: No lost updates, no corruption.  
+
+6. Summary: -  
+In ConcurrentHashMap, resizing happens when the size exceeds the threshold (capacity × load factor). Unlike HashMap, which resizes in one big rehash (blocking), ConcurrentHashMap performs incremental, cooperative resizing. When a bucket is moved, it is replaced by a ForwardingNode, which redirects accesses to the new table. Multiple threads can help in rehashing, making resizing concurrent, non-blocking, and efficient.  
+<br />
+<br />
+<br />
+
+
+
+# 11. Volatile keyword in Java
+
