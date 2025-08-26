@@ -857,3 +857,65 @@ public class Test {
   b. When you write "abc" == "abc", both refer to the same pool object → == returns true.  
   c. When you write new String("abc"), a new object is created in heap → == returns false even though .equals() is true.  
   d. Use .intern() if you want heap strings to be moved into the pool.  
+
+<br />
+<br />
+<br />
+
+
+
+
+# 16. String Pool vs Heap
+1. Suppose we write:  
+```java
+String s1 = "Hello";
+String s2 = "Hello";
+String s3 = new String("Hello");
+String s4 = s3.intern();
+```
+Memory Representation
+```java
+          +-------------------+
+          |   String Pool     |   (inside Heap/Metaspace)
+          +-------------------+
+          |   "Hello"   <---- s1, s2, s4
+          +-------------------+
+
+          +-------------------+
+          |       Heap        |
+          +-------------------+
+          | "Hello" (new) <--- s3
+          +-------------------+
+```
+2. Step by Step: -  
+  a. String s1 = "Hello"; 
+  b. "Hello" is created in the String pool.  
+  c. s1 points to it.  
+  d. String s2 = "Hello";  
+  e. "Hello" already exists in the pool.  
+  f. s2 points to the same pooled object as s1.  
+  g. s1 == s2 → true.  
+  h. String s3 = new String("Hello");  
+  i. A new String object is created in the heap (not pool).  
+  j. s3 points to this new object.  
+  k. s1 == s3 → false (different references).  
+  l. String s4 = s3.intern();  
+  m. .intern() checks the pool for "Hello".  
+  n. Since it exists, s4 points to the pooled "Hello".  
+  o. s4 == s1 → true.  
+
+3. Quick Summary  
+a. String Pool → special memory area for string literals (saves memory).  
+b. Heap → new objects created via new String().  
+c. "abc" == "abc" → true (same pool reference).  
+d. "abc".equals("abc") → true (same content).  
+e. new String("abc") == "abc" → false (different references).  
+f. Use .intern() to force pooling.  
+
+<br />
+<br />
+<br />
+
+
+
+
