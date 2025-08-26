@@ -10,20 +10,15 @@ Compensating Transactions - If a failure occurs, previously executed transaction
 Event/Message Driven - Saga relies on messages/events to coordinate between services.
 
 3. Two Main Saga Implementations: -  
-  a. Choreography (Event-based)  
-  1. No central controller.  
-  2. Each service publishes events and listens for the next event.  
-  3. Simpler, but can become hard to manage as complexity grows.  
-  4. Example:  
-  Order Service → creates order → emits OrderCreated event.  
-  Payment Service → listens, processes payment → emits PaymentCompleted.  
-  Shipping Service → listens, ships product → emits Shipped.  
-  If payment fails → emit PaymentFailed → Order Service compensates by canceling the order.
 
-  b. Orchestration (Command-based)  
-  1. A central orchestrator (saga coordinator) tells each service what to do.  
-  2. Easier to manage complex workflows.  
-  3. Example: An Order Orchestrator service calls Payment → Shipping → Notification in sequence. If payment fails, orchestrator calls the Order Service to cancel.
+  | Implementation | Features | Example |
+  |----------------|----------|---------|
+  | Choreography (Event-based) | No central controller. | Order Service → creates order → emits OrderCreated event. |
+  | | Each service publishes events and listens for the next event. | Payment Service → listens, processes payment → emits PaymentCompleted. |
+  | | Simpler, but can become hard to manage as complexity grows. | Shipping Service → listens, ships product → emits Shipped. |
+  | | | If payment fails → emit PaymentFailed → Order Service compensates by canceling the order. |
+  | Orchestration (Command-based) | A central orchestrator (saga coordinator) tells each service what to do. | Example: An Order Orchestrator service calls Payment → Shipping → Notification in sequence. |
+  | | Easier to manage complex workflows. | If payment fails, orchestrator calls the Order Service to cancel. |
 
 4. Benefits:-  
   a. Avoids distributed transactions (2PC).  
