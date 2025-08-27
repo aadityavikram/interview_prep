@@ -265,4 +265,134 @@ Immutable objects are inherently thread-safe because their state never changes a
 
 
 
-# 5. 
+# 5. Purpose of serialization in a PoJo, and in what scenarios is it commonly used?
+
+1. What is Serialization in Java?  
+  a. Serialization is the process of converting an object into a byte stream so it can be:  
+  b. Stored (e.g., in a file, database, cache)  
+  c. Transferred (e.g., over a network, between JVMs, or via APIs)  
+  d. Later deserialized back into the same object.  
+  e.  A class must implement java.io.Serializable to allow its objects to be serialized.  
+
+2. Purpose of Serialization in a POJO  
+- a. A POJO (Plain Old Java Object) typically just has fields + getters/setters.  
+- b. When you mark it Serializable, it allows:    
+  - 1. Persistence  
+    - a. Save POJO state into a file or DB for later retrieval.  
+    - b. Example: Saving user session objects.  
+  - 2. Network communication  
+    - a. Send objects over the network (client ↔ server, microservices, RMI).  
+    - b. Example: A User object sent as a serialized stream from one JVM to another.  
+  - 3. Caching  
+    - a. Frameworks like Redis, Ehcache, Hazelcast store serialized POJOs in memory/disk.  
+  - 4. Distributed systems  
+    - a. In systems like Hadoop, Kafka, or messaging queues, objects are serialized to transfer between nodes.  
+  - 5. Deep copy (sometimes)  
+    - a. Serialize + deserialize to create a deep copy of an object.  
+
+3. Example: Serializable POJO  
+```java
+import java.io.*;
+
+class Employee implements Serializable {
+    private int id;
+    private String name;
+
+    // constructor
+    public Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // getters
+    public int getId() { return id; }
+    public String getName() { return name; }
+}
+
+public class TestSerialization {
+    public static void main(String[] args) throws Exception {
+        Employee emp = new Employee(101, "Aaditya");
+
+        // Serialize to file
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("employee.ser"));
+        oos.writeObject(emp);
+        oos.close();
+
+        // Deserialize from file
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("employee.ser"));
+        Employee deserializedEmp = (Employee) ois.readObject();
+        ois.close();
+
+        System.out.println("Deserialized Employee: " + deserializedEmp.getId() + " - " + deserializedEmp.getName());
+    }
+}
+```
+
+4. Common Scenarios Where POJO Serialization is Used  
+  a. Storing sessions - Web apps (e.g., Tomcat, Spring Boot) serialize session objects when saving session state.  
+  b. Messaging & Queues - Sending objects through JMS, Kafka, RabbitMQ, etc.  
+  c. APIs & Web Services - POJOs are serialized into JSON/XML when communicating via REST/SOAP.  
+  d. Frameworks - Hibernate, JPA, Spring often require POJOs to be serializable to store/retrieve objects across layers.
+
+5. Summary  
+Serialization in a POJO allows its state to be converted into a byte stream so it can be persisted or transferred across JVMs. It is commonly used in caching, session storage, network communication, APIs, distributed systems, and messaging.
+
+<br />
+<br />
+<br />
+
+
+
+# 6. Java built-in serialization (Serializable) vs custom serialization (Json, Gson)
+
+1. Java’s Built-in Serialization (Serializable)  
+  a. Uses java.io.Serializable interface.  
+  b. Converts objects into a binary byte stream.  
+  c. Can be written to a file, sent over a socket, or stored in DB.  
+  d. Example:  
+```java
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("emp.ser"));
+oos.writeObject(emp);
+```
+
+2. Cons  
+  a. JVM-specific → serialized objects may not be portable across JVM versions.  
+  b. Slow & heavy (stores a lot of metadata about classes).  
+  c. Fragile if the class changes (e.g., adding/removing fields breaks old serialized objects).  
+
+3. Good for: Simple use cases like caching in same JVM, or small apps.  
+4. Bad for: Large-scale distributed systems, cross-language communication.  
+
+5. Custom Serialization Formats  
+
+  | Format | Features | Pros | Cons |
+  |--------|----------|------|------|
+  | JSON (Text-based) | POJOs converted to JSON using libraries (Jackson, Gson). | Human-readable, cross-language, widely supported. | Bigger size (verbose), slower than binary formats. |
+  | | Human-readable, language-independent. | | |
+  | | | Widely used in REST APIs. | |
+
+```java
+ObjectMapper mapper = new ObjectMapper();
+String json = mapper.writeValueAsString(emp);   // serialize
+Employee emp2 = mapper.readValue(json, Employee.class); // deserialize
+```
+
+  | Format | Features | Pros | Cons |
+  |--------|----------|------|------|
+  | XML (Text-based) | Similar to JSON, but heavier and more verbose. | Standardized, human-readable. | Very verbose, slower. |
+  | | Used in SOAP services, configuration files. | | |
+  | Protocol Buffers (Protobuf, by Google) | Compact, binary format. | Very efficient, great for microservices. | Needs schema definition, not human-readable. |
+  | | Requires .proto schema file. | | |
+  | | Much faster and smaller than JSON/XML. | | |
+  | | Cross-language (Java, C++, Python, Go, etc.). | | |
+  | Apache Avro | Popular in Kafka, Hadoop, Big Data systems. | Compact, supports schema evolution (handles changes better than Java Serializable). | Requires schema management. |
+  | | Similar to Protobuf, schema-based binary serialization. | | |
+  | | Schema is stored separately or alongside data. | | |
+
+<br />
+<br />
+<br />
+
+
+
+# 7. 
