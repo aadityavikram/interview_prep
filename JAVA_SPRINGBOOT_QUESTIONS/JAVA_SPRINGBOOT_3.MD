@@ -343,7 +343,7 @@ Serialization in a POJO allows its state to be converted into a byte stream so i
 
 
 
-# 6. Java built-in serialization (Serializable) vs custom serialization (Json, Gson)
+# 6. Java built-in serialization (Serializable) vs custom serialization (Jackson, Gson)
 
 1. Java’s Built-in Serialization (Serializable)  
   a. Uses java.io.Serializable interface.  
