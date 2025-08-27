@@ -884,7 +884,7 @@ If we override equals() but not hashCode(), objects that are equal may have diff
 
 
 
-# 13. If you override hashCode() but do not override equals() , what could go wrong when storing objects in a HashMap?
+# 12. If you override hashCode() but do not override equals() , what could go wrong when storing objects in a HashMap?
 
 1. Suppose you override hashCode() but NOT equals().  
 ```java
