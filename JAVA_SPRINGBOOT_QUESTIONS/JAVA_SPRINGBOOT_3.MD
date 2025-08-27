@@ -728,3 +728,223 @@ Singleton can be broken by Reflection, Serialization, Cloning, or multiple Class
 
 # 10. What is the hashCode-equals contract? Why is it important?
 
+1. hashCode–equals Contract  
+  a. Java defines a contract between the equals() and hashCode() methods:  
+  b. If two objects are equal (equals() returns true), they must have the same hashCode().  
+  c. Otherwise, HashMap / HashSet may put them in different buckets → duplicates appear.  
+  d. If two objects have the same hashCode(), they may or may not be equal.  
+  e. Collisions can happen (different objects, same hash).  
+  f. So equality must always be confirmed with equals().  
+
+2. Why is it Important?  
+  a. Collections like HashMap, HashSet, Hashtable:  
+  b. Use hashCode() to decide bucket placement (where to store/retrieve).  
+  c. Use equals() to check if two keys are the same inside that bucket.  
+  d. If you break the contract, collections won’t work correctly.  
+  e. Example: Breaking the Contract  
+
+```java
+class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Person)) return false;
+        Person other = (Person) obj;
+        return name.equals(other.name);
+    }
+    // forgot to override hashCode()
+}
+```
+```java
+Usage:
+
+Person p1 = new Person("Aaditya");
+Person p2 = new Person("Aaditya");
+
+HashSet<Person> set = new HashSet<>();
+set.add(p1);
+set.add(p2);
+
+System.out.println(set.size()); // 2, Expected 1
+```
+
+equals() says they’re equal, but default hashCode() (from Object) is different.  
+
+Correct Implementation  
+```java
+class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Person)) return false;
+        Person other = (Person) obj;
+        return name.equals(other.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode(); // consistent with equals
+    }
+}
+```
+Now:
+```java
+HashSet<Person> set = new HashSet<>();
+set.add(new Person("Aaditya"));
+set.add(new Person("Aaditya"));
+System.out.println(set.size()); // 1
+```
+
+3. Rules of the Contract (as per Java spec)  
+  a. If a.equals(b), then a.hashCode() == b.hashCode().  
+  b. If a.hashCode() == b.hashCode(), a.equals(b) may or may not be true.  
+  c. hashCode() must consistently return the same value during the lifetime of the object (unless fields used in equals/hashCode change).  
+
+4. Interview-Ready Summary  
+The hashCode–equals contract ensures correct behavior of hash-based collections. If two objects are equal, they must have the same hashCode. Otherwise, collections like HashSet or HashMap may store duplicates or fail to find keys. That’s why whenever we override equals(), we must also override hashCode() consistently.
+
+<br />
+<br />
+<br />
+
+
+
+# 11. If you override equals() but do not override hashCode(), what could go wrong when storing objects in a HashMap?
+
+`. Suppose you override equals() but forget to override hashCode().  
+```java
+class Person {
+    String name;
+
+    Person(String name) { this.name = name; }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Person)) return false;
+        Person other = (Person) obj;
+        return this.name.equals(other.name);
+    }
+    // hashCode not overridden
+}
+```
+
+2. What Happens in a HashMap  
+When inserting:  
+
+```java
+map.put(new Person("Aaditya"), "First");
+map.put(new Person("Aaditya"), "Second");
+```
+
+3. Both objects are equal (equals() returns true).  
+4. But since hashCode() is not overridden, they inherit from Object.  
+5. Default hashCode() → based on memory address, so two different objects get different hash codes.  
+6. HashMap puts them in different buckets.  
+7. Result:  
+  a. HashMap thinks they are two different keys.  
+  b. You end up with two entries instead of updating the value.  
+
+```java
+System.out.println(map.size()); 
+// Output: 2, Expected: 1
+```
+
+8. Another Problem: Retrieval
+```java
+Person p1 = new Person("Aaditya");
+map.put(p1, "Engineer");
+
+// Later
+Person p2 = new Person("Aaditya");
+System.out.println(map.get(p2)); // null
+```
+
+Even though p1.equals(p2) is true,  
+Their hashCode() is different → HashMap looks in the wrong bucket → fails to find the entry.  
+
+9. Summary  
+If we override equals() but not hashCode(), objects that are equal may have different hash codes. In a HashMap, such objects end up in different buckets, causing duplicate entries and lookup failures. This breaks the integrity of the collection — you won’t be able to retrieve values reliably. That’s why the hashCode–equals contract requires overriding both methods together.
+
+<br />
+<br />
+<br />
+
+
+
+# 13. If you override hashCode() but do not override equals() , what could go wrong when storing objects in a HashMap?
+
+1. Suppose you override hashCode() but NOT equals().  
+```java
+class Person {
+    String name;
+
+    Person(String name) { this.name = name; }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode(); // consistent hash
+    }
+    // equals not overridden → uses Object.equals (reference equality)
+}
+```
+
+2. What Happens in a HashMap  
+When inserting:  
+```java
+Map<Person, String> map = new HashMap<>();
+map.put(new Person("Aaditya"), "First");
+map.put(new Person("Aaditya"), "Second");
+```
+3. Both objects produce the same hashCode (since name is same).  
+4. HashMap puts them in the same bucket.  
+5. BUT: HashMap then checks equals() to see if keys are equal.  
+6. Since we didn’t override equals(), it uses Object.equals() → compares memory addresses.  
+7. Result: they are treated as different keys, so both entries exist in the same bucket.  
+```java
+System.out.println(map.size()); 
+// Output: 2, Expected: 1
+```
+
+8. Retrieval Problem  
+```java
+Person p1 = new Person("Aaditya");
+map.put(p1, "Engineer");
+
+// Later
+Person p2 = new Person("Aaditya");
+System.out.println(map.get(p2)); // null
+```
+
+9. HashMap finds the correct bucket (hashCode matches).  
+10. But inside the bucket, it uses equals() to find the key.  
+11. Since equals() is not overridden, p1.equals(p2) is false (different objects).  
+12. Result: lookup fails.  
+
+13. Summary  
+  - a. If you override equals() but not hashCode() →  
+    - 1. Equal objects may end up in different buckets.  
+    - 2. Leads to duplicates and lookup failures.  
+  - b. If you override hashCode() but not equals() →  
+    - 1. Objects with the same hash go to the same bucket.  
+    - 2. But equals() fails (default checks reference).  
+    - 3. Leads to duplicates in the same bucket and lookup failures.  
+
+<br />
+<br />
+<br />
+
+
+
