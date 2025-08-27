@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|221| Minimum Adjacent Swaps to Reach the Kth Smallest Number | https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/description/ | Medium | https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/solutions/7127483/java-o-k-n-n-2-solution/ |
 |220| Next Permutation | https://leetcode.com/problems/next-permutation/description/ | Medium | https://leetcode.com/problems/next-permutation/solutions/7127112/java-o-n-solution/ |
 |219| Adding Spaces to a String | https://leetcode.com/problems/adding-spaces-to-a-string/description/ | Medium | https://leetcode.com/problems/adding-spaces-to-a-string/solutions/7123268/java-o-n-m-solution/ |
 |218| Interval List Intersections | https://leetcode.com/problems/interval-list-intersections/description/ | Medium | https://leetcode.com/problems/interval-list-intersections/solutions/7123208/java-o-n-m-solution/ |
