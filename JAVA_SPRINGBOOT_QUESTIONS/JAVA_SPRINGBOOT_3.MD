@@ -595,7 +595,7 @@ enum Singleton {
         System.out.println("Hello from Singleton");
     }
 }
-``
+```
 Easiest, thread-safe, prevents reflection & serialization issues.  
 Slightly less flexible (cannot extend other classes).  
 
