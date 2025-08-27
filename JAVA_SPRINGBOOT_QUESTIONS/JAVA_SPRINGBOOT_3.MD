@@ -717,3 +717,14 @@ enum Singleton {
 
 6. Summary  
 Singleton can be broken by Reflection, Serialization, Cloning, or multiple ClassLoaders. To fix these, we add guards in the constructor, use readResolve() in serialization, override clone(), or use Enum Singleton which naturally handles these issues.
+
+<br />
+<br />
+<br />
+
+
+
+
+
+# 10. What is the hashCode-equals contract? Why is it important?
+
