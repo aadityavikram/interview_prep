@@ -37,7 +37,24 @@
 
 <br />
 
+# [JAVA_SPRINGBOOT_3.MD][JAVA_SPRINGBOOT_3_MD_LINK]
+1. Indexes in SQL, how will you create one and how does it work?  
+2. Clustered vs Non-Clustered Indexes  
+3. Immutable classes in Java and how to implement them?  
+4. Immutability and Thread-Safety  
+5. Purpose of serialization in a PoJo, and in what scenarios is it commonly used?  
+6. Java built-in serialization (Serializable) vs custom serialization (Jackson, Gson)  
+7. Suppose you need to send a Java object over a network in a distributed application. What challenges might arise, and how would you handle them?  
+8. What is a Singleton pattern and how can you implement it in Java?  
+9. How Singleton Can Be Broken (and Fixes)  
+10. What is the hashCode-equals contract? Why is it important?  
+11. If you override equals() but do not override hashCode(), what could go wrong when storing objects in a HashMap?  
+12. If you override hashCode() but do not override equals() , what could go wrong when storing objects in a HashMap?  
+
+<br />
+
 [JAVA_SPRINGBOOT_1_MD_LINK]: /JAVA_SPRINGBOOT_QUESTIONS/JAVA_SPRINGBOOT_1.MD
 [JAVA_SPRINGBOOT_2_MD_LINK]: /JAVA_SPRINGBOOT_QUESTIONS/JAVA_SPRINGBOOT_2.MD
+[JAVA_SPRINGBOOT_3_MD_LINK]: /JAVA_SPRINGBOOT_QUESTIONS/JAVA_SPRINGBOOT_3.MD
 
 
