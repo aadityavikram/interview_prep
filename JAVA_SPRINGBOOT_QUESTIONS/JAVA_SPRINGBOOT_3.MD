@@ -389,6 +389,19 @@ Employee emp2 = mapper.readValue(json, Employee.class); // deserialize
   | | Similar to Protobuf, schema-based binary serialization. | | |
   | | Schema is stored separately or alongside data. | | |
 
+| Feature             | Java Serializable   | JSON      | Protobuf / Avro         |
+| ------------------- | ------------------- | --------- | ----------------------- |
+| Format              | Binary (Java-only)  | Text      | Binary                  |
+| Cross-language?     | No                  | Yes       | Yes                     |
+| Readable by humans? | No                  | Yes       | No                      |
+| Performance         | Slow                | Medium    | Very fast               |
+| Size                | Large               | Medium    | Small                   |
+| Schema required?    | No                  | No        | Yes                     |
+| Common Use          | Small apps, caching | REST APIs | Microservices, Big Data |
+
+6. Summary  
+Java’s built-in serialization (Serializable) is easy but slow, JVM-specific, and fragile. In real-world distributed systems, JSON is used for REST APIs, and binary formats like Protobuf or Avro are preferred for high-performance, cross-language communication. That’s why frameworks like Kafka, gRPC, and Hadoop avoid Java’s native serialization.
+
 <br />
 <br />
 <br />
