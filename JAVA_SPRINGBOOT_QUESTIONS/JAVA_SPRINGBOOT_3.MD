@@ -709,11 +709,11 @@ enum Singleton {
     INSTANCE;
 }
 ```
-Automatically prevents:  
-  Reflection (enum constructors can’t be accessed via reflection).  
-  Serialization (handled by JVM).  
-  Cloning (not supported for enums).  
-  That’s why Joshua Bloch (Effective Java) recommends Enum Singleton.  
+5. Automatically prevents:  
+  a. Reflection (enum constructors can’t be accessed via reflection).  
+  b. Serialization (handled by JVM).  
+  c. Cloning (not supported for enums).  
+  d. That’s why Joshua Bloch (Effective Java) recommends Enum Singleton.  
 
-5. Summary  
+6. Summary  
 Singleton can be broken by Reflection, Serialization, Cloning, or multiple ClassLoaders. To fix these, we add guards in the constructor, use readResolve() in serialization, override clone(), or use Enum Singleton which naturally handles these issues.
