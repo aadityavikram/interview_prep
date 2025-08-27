@@ -110,4 +110,159 @@ CREATE INDEX index_name ON table_name (column1, column2, ...);
 
 
 
-# 3. 
+# 3. Immutable classes in Java and how to implement them?
+
+1. What is an Immutable Class?  
+  a. An immutable class is a class whose objects cannot be modified after creation.  
+  b. Once you create an object, its state (field values) cannot change.  
+  c. Any modification results in a new object instead of changing the old one.  
+  d. Example you already know: String in Java is immutable.  
+
+2. Why do we need Immutable Classes?  
+  a. Thread-safety → Multiple threads can use immutable objects without synchronization.  
+  b. Caching → Since values never change, they can be safely cached.  
+  c. Security → Prevents outside classes from corrupting internal state.  
+  d. Simplicity → Predictable behavior (no accidental side effects).
+
+3. How to Implement an Immutable Class in Java  
+  a. Declare the class final → so it can’t be subclassed.  
+  b. Make all fields private and final → so they can’t be modified after assignment.  
+  c. Initialize fields only in the constructor.  
+  d. No setters → provide only getters.  
+  e. Return copies (deep copy) of mutable fields → so outside code can’t change them.  
+
+4. Example: Immutable Class  
+```java
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+
+public final class Employee {
+    
+    private final String name;         // Immutable field (String is immutable)
+    private final int id;              // Primitive → immutable
+    private final Date joinDate;       // Mutable → must handle carefully
+    private final List<String> skills; // Mutable → must handle carefully
+
+    // Constructor initializes all fields
+    public Employee(String name, int id, Date joinDate, List<String> skills) {
+        this.name = name;
+        this.id = id;
+        // Defensive copy of mutable objects
+        this.joinDate = new Date(joinDate.getTime()); 
+        this.skills = new ArrayList<>(skills);
+    }
+
+    // Only getters (no setters)
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Date getJoinDate() {
+        // Return defensive copy
+        return new Date(joinDate.getTime());
+    }
+
+    public List<String> getSkills() {
+        // Return defensive copy
+        return new ArrayList<>(skills);
+    }
+}
+```
+
+If we didn’t make defensive copies, someone could call:
+```java
+employee.getSkills().add("Hacking");
+```
+and change the object’s state indirectly — which breaks immutability.
+
+5. Immutable classes in Java  
+  a. All wrapper classes in Java (Integer, Double, etc.) are immutable.  
+  b. String is the most famous immutable class.  
+
+<br />
+<br />
+<br />
+
+
+
+
+# 4. Immutability and Thread-Safety
+
+1. Why threads cause problems normally?  
+  a. When multiple threads share a mutable object:  
+  b. One thread might read while another writes, leading to inconsistent or unpredictable results.  
+  c. That’s why in multi-threaded code, we often need synchronization (synchronized, locks, volatile) to avoid race conditions.  
+  d. Example (mutable object, unsafe):
+
+```java
+class Counter {
+    private int count = 0;
+    public void increment() {
+        count++;   // Not atomic, not thread-safe
+    }
+    public int getCount() {
+        return count;
+    }
+}
+```
+If two threads call increment() at the same time, the result may be wrong (lost updates).  
+
+2. Why immutable objects are naturally thread-safe?  
+  a. In immutable objects, state never changes after creation.  
+  b. No matter how many threads reference the same object, they all see the same consistent state.  
+  c. Since no thread can modify it, there’s no need for synchronization.  
+  d. Example (immutable object, thread-safe):
+
+```java
+final class Point {
+    private final int x;
+    private final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() { return x; }
+    public int getY() { return y; }
+}
+```
+If 100 threads access the same Point object, they’ll always see the same x and y.  
+No locks, no race conditions.  
+
+3. Real-world Example: String in Java  
+  a. String is immutable → you can safely share "Hello" across multiple threads.  
+  b. If one thread does str.toUpperCase(), a new String is created.  
+  c. The original "Hello" is unchanged for everyone else.  
+
+4. But what if I need a "modified" object?  
+  a. With immutables, instead of modifying, you create a new object.  
+  b. Example:  
+```java
+Point p1 = new Point(10, 20);
+Point p2 = new Point(p1.getX() + 5, p1.getY()); // New object with updated x
+```
+p1 is untouched, p2 is a new object. Both are thread-safe.  
+
+5. Downsides of immutability (trade-offs)  
+  a. Performance overhead: Creating new objects instead of modifying can be costly if done in large loops.  
+  b. Memory usage: More objects in heap → more GC pressure.  
+  c. That’s why frameworks like StringBuilder exist (mutable, for performance in concatenation).  
+
+6. Summary
+Immutable objects are inherently thread-safe because their state never changes after construction. Multiple threads can freely share them without synchronization. That’s why classes like String, Integer, and LocalDate are immutable.
+
+<br />
+<br />
+<br />
+
+
+
+
+
+# 5. 
