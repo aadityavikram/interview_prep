@@ -427,9 +427,9 @@ Java’s built-in serialization (Serializable) is easy but slow, JVM-specific, a
 4. Schema Evolution  
   a. If your object changes (new fields, renamed fields), old clients may not understand the new format unless you use a serialization mechanism that supports schema evolution (like Avro or Protobuf).  
 
-5. How to Handle These Challenges  
+5. How to Handle These Challenges:-  
 
-1. Use a Portable Serialization Format  
+6. Use a Portable Serialization Format  
   a. Instead of Java’s default Serializable:  
   b. Use JSON (via Jackson/Gson) → easy, human-readable, cross-language.  
   c. Use Protobuf / Avro / Thrift → compact binary, schema-based, great for high-performance distributed systems.  
@@ -449,25 +449,25 @@ message MyObject {
 ```
 Compile .proto → generates Java class → send over network as binary.
 
-2. Handle Versioning (Schema Evolution)  
+7. Handle Versioning (Schema Evolution)  
   a. JSON → extra fields can usually be ignored.  
   b. Protobuf / Avro → designed to handle field addition/removal without breaking compatibility.  
 
-3. Optimize for Performance  
+8. Optimize for Performance  
   a. Use binary formats (Protobuf, Avro) if performance & bandwidth are critical.  
   b. Compress large payloads (e.g., GZIP JSON).  
 
-4. Ensure Security  
-a. Never deserialize untrusted Java byte streams directly (Serializable → RCE risk).  
-b. Validate payloads before deserialization.  
-c. Prefer safe libraries like Jackson, Protobuf, Avro.  
+9. Ensure Security  
+  a. Never deserialize untrusted Java byte streams directly (Serializable → RCE risk).  
+  b. Validate payloads before deserialization.  
+  c. Prefer safe libraries like Jackson, Protobuf, Avro.  
 
-5. Networking Concerns  
+10. Networking Concerns  
   a. Use reliable protocols (e.g., gRPC on HTTP/2, or REST over HTTP/1.1).  
   b. Add retries and timeout handling.  
   c. Ensure objects are small enough (avoid sending huge graphs → break them down).  
 
-6. Summary  
+11. Summary  
 The main challenges are portability, performance, versioning, and security. Java’s built-in serialization is slow, JVM-specific, and insecure, so avoid it. Instead, use JSON for human-readable APIs or a binary format like Protobuf/Avro for efficiency and cross-language support. Design for schema evolution, use compression if needed, and ensure proper error handling and security when deserializing.
 
 <br />
