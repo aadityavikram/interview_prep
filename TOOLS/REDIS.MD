@@ -125,5 +125,153 @@ PUBLISH news "Redis 7 Released!"
   c. Leaderboards (sorted sets).  
   d. Queues (lists, streams).  
   e. Rate limiting (INCR with expiry).  
+  f. Real-time counters/analytics.  
 
-Real-time counters/analytics.
+<br />
+<br />
+<br />
+
+
+
+
+# 2. JedisConnectionFactory vs LettuceConnectionFactory
+
+1. Background  
+  a. Both are Spring Data Redis connection factories (implementing RedisConnectionFactory).  
+  b. They provide low-level connections to Redis.  
+  c. The difference lies in the underlying Redis client library:  
+  d. Jedis → Old, synchronous, thread-unsafe (per-connection model).  
+  e. Lettuce → Modern, asynchronous, thread-safe (netty-based).  
+
+2. JedisConnectionFactory  
+  a. Uses Jedis client internally.  
+  b. Blocking / synchronous API → each command blocks until result arrives.  
+
+3. Connection model:  
+  a. Each thread needs its own connection.  
+  b. Uses connection pool (Commons Pool2).  
+  c. Pooling is mandatory for scalability.  
+  d. Thread-safety: Jedis connections are not thread-safe.  
+  e. Performance: Good for small workloads, but limited under high concurrency due to pool contention.  
+  f. Cluster support: Added later, not as smooth as Lettuce.  
+  g. Pub/Sub: Requires dedicated connections (one per subscriber).  
+
+4. Pros:  
+  a. Simple, stable, widely used for years.  
+  b. Easy to debug.  
+
+5. Cons:  
+  a. Pool management overhead.  
+  b. Blocking model only.  
+  c. Weak cluster and async support.  
+
+6. LettuceConnectionFactory  
+  a. Uses Lettuce client internally.  
+  b. Built on Netty → asynchronous & event-driven.  
+
+7. Connection model:  
+  a. A single connection can be shared by multiple threads.  
+  b. No pooling needed (thread-safe).  
+  c. Much more scalable under high concurrency.  
+  d. Thread-safety: Safe across multiple threads.  
+  e. Performance: Typically faster than Jedis under load.  
+  f. Cluster support: Native, first-class, very stable.  
+  g. Pub/Sub: More efficient; can multiplex connections.  
+  h. Reactive support: Works with Spring WebFlux (non-blocking).  
+
+8. Pros:  
+  a. Thread-safe, no pool overhead.  
+  b. Async & reactive APIs.  
+  c. Strong cluster support.  
+  d. Better performance for high-concurrency apps.  
+
+9. Cons:  
+  a. Slightly higher memory footprint (because Netty).  
+  b. More complex for debugging low-level netty issues.  
+
+| Feature                 | JedisConnectionFactory       | LettuceConnectionFactory       |
+| ----------------------- | ---------------------------- | ------------------------------ |
+| **Client**              | Jedis (blocking)             | Lettuce (Netty, async)         |
+| **Thread Safety**       | No (needs pool per thread)   | Yes (multi-threaded, no pool)  |
+| **Connection Pooling**  | Required                     | Not required                   |
+| **API Style**           | Synchronous only             | Synchronous + Async + Reactive |
+| **Performance**         | Lower under high concurrency | Better scalability             |
+| **Cluster Support**     | Basic, limited               | Native, robust                 |
+| **Pub/Sub**             | Dedicated connections needed | Multiplexed connections        |
+| **Spring Boot Default** |  (deprecated)                |  (default since Spring 2.0+)   |
+
+10. Current Best Practice  
+  a. Spring Boot 2.x+ → Lettuce is the default, Jedis is optional.  
+
+11. Use LettuceConnectionFactory unless:  
+  a. You’re maintaining legacy code with Jedis.  
+  b. Or you specifically need Jedis-specific behavior (rare).  
+  c. Example config with Lettuce:  
+
+```java
+@Configuration
+public class RedisConfig {
+    @Bean
+    public LettuceConnectionFactory redisConnectionFactory() {
+        return new LettuceConnectionFactory("localhost", 6379);
+    }
+}
+```
+
+12. Conclusion:  
+For new projects → always prefer LettuceConnectionFactory.  
+For legacy apps with Jedis → fine to use, but consider migrating for performance, scalability, and reactive support.  
+
+<br />
+<br />
+<br />
+
+
+
+
+
+# 3. Jedis vs Lettuce in real application issue
+
+1. What Happened  
+Spring Boot pod restarted → all beans (including JedisConnectionFactory) were reinitialized.  
+But the Redis server connection wasn’t being restored when you used JedisConnectionFactory, while it was automatically recovered when you used LettuceConnectionFactory.  
+
+2.  Why Jedis Fails to Reconnect  
+  - a. Jedis is synchronous + blocking.  
+    - 1. It opens a raw TCP socket to Redis.  
+    - 2. If that connection breaks (because the pod restarted, or Redis restarted, or network blipped), the Jedis connection is dead.  
+  - b. Jedis does not auto-reconnect.  
+    - 1. Once the socket is closed, the connection object is useless.  
+    - 2. You need to manually recreate connections (or rely on a connection pool manager to do it).  
+  - c. JedisConnectionFactory in Spring Data Redis  
+    - 1. Wraps a Jedis pool (Commons Pool2).  
+    - 2. When the connection is broken, Jedis doesn’t retry or reestablish automatically — the pool just hands out broken connections until you restart the app or pool is refreshed.  
+  - d. Result: When the pod came back up, Jedis still had stale/broken connections in the pool, so your app couldn’t talk to Redis.  
+
+3. Why Lettuce Works  
+  - a. Lettuce is built on Netty (asynchronous, event-driven I/O).  
+    - 1. Connections are stateful but resilient.  
+    - 2. If the TCP socket drops, Lettuce will attempt reconnects automatically (configurable).  
+  - b. Connection re-establishment logic:  
+    - 1. Lettuce monitors I/O channels and transparently reconnects when Redis comes back online.  
+    - 2. Even in cluster mode, Lettuce can auto-refresh topology and recover nodes.  
+  - c. Thread-safe single connection:  
+    - 1. No pool handing out broken connections.  
+    - 2. One LettuceConnection can be shared safely across multiple threads, and when it detects disconnection → it reestablishes.  
+  - d. Result: When the pod restarted, Lettuce automatically reconnected to Redis, so your app kept working without manual intervention.  
+
+4. Summary  
+  a. JedisConnectionFactory → No auto-reconnect. Connections remain broken unless explicitly recreated. After pod restart, your app had dangling sockets.  
+  b. LettuceConnectionFactory → Has built-in auto-reconnect via Netty event loop. So when Redis became available again, your app’s Redis connection was transparently reestablished.  
+
+5. Best Practice  
+  a. For cloud-native / containerized environments (Kubernetes, pods, ephemeral restarts) → Always use Lettuce because it’s designed to handle transient network failures gracefully.  
+  b. Jedis might still be fine for small legacy apps running on stable VMs with no frequent restarts.  
+
+<br />
+<br />
+<br />
+
+
+
+
