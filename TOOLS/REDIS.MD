@@ -268,10 +268,16 @@ But the Redis server connection wasn’t being restored when you used JedisConne
   a. For cloud-native / containerized environments (Kubernetes, pods, ephemeral restarts) → Always use Lettuce because it’s designed to handle transient network failures gracefully.  
   b. Jedis might still be fine for small legacy apps running on stable VMs with no frequent restarts.  
 
+6. Links to read  
+  a. [Why is Redis So Fast Despite Being Single-Threaded?][REDIS_SINGLE_THREADED_LINK]  
+  b. [What is Redis?][WHAT_IS_REDIS_LINK]  
+
+
 <br />
 <br />
 <br />
 
 
 
-
+[REDIS_SINGLE_THREADED_LINK]: https://medium.com/@aditimishra_541/why-is-redis-so-fast-despite-being-single-threaded-dc06ba33fc75
+[WHAT_IS_REDIS_LINK]: https://medium.com/@humberto521336/what-is-redis-94c1930bd3c3
