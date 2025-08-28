@@ -267,17 +267,43 @@ But the Redis server connection wasn’t being restored when you used JedisConne
 5. Best Practice  
   a. For cloud-native / containerized environments (Kubernetes, pods, ephemeral restarts) → Always use Lettuce because it’s designed to handle transient network failures gracefully.  
   b. Jedis might still be fine for small legacy apps running on stable VMs with no frequent restarts.  
-
-6. Links to read  
-  a. [Why is Redis So Fast Despite Being Single-Threaded?][REDIS_SINGLE_THREADED_LINK]  
-  b. [What is Redis?][WHAT_IS_REDIS_LINK]  
-
-
 <br />
 <br />
 <br />
 
 
+
+# 4. Bloom Filter
+
+1. A Bloom filter is a space-efficient probabilistic data structure used to test whether an element is a member of a set. It operates on a bit array and a set of hash functions.  
+
+2. Initialization:  
+  a. A Bloom filter is initialized as a bit array of a fixed size, where all bits are set to 0. It also uses a predetermined number of independent hash functions.  
+
+3. Adding an Element:  
+  a. To add an element to the set, the element is passed through each of the k hash functions.  
+  b. Each hash function produces an index within the bit array.  
+  c. The bits at these k calculated indices in the bit array are then set to 1.  
+
+4. Checking for Membership:  
+  a. To check if an element is present in the set, the same k hash functions are applied to the element.  
+  b. The bits at the resulting k indices in the bit array are then examined.  
+  c. If all of these k bits are set to 1, the Bloom filter indicates that the element might be in the set (a "possibly in the set" result).  
+  d. If any of these k bits is found to be 0, the Bloom filter definitively states that the element is not in the set (a "definitely not in the set" result).  
+
+5. Probabilistic Nature:  
+  a. Bloom filters can produce false positives (claiming an element is in the set when it's not), but never false negatives (claiming an element is not in the set when it actually is). The probability of false positives increases with the number of elements added to the filter and decreases with a larger bit array and more hash functions.  
+
+6. Space Efficiency:  
+  a. They are highly space-efficient as they do not store the actual elements, only a compact representation in a bit array.  
+
+7. No Deletion:  
+  a. Elements cannot be reliably removed from a Bloom filter without potentially affecting the membership status of other elements, as removing a bit might incorrectly indicate the absence of another element that also hashed to that bit.  
+
+# 5. Links to Read
+
+1. [Why is Redis So Fast Despite Being Single-Threaded?][REDIS_SINGLE_THREADED_LINK]  
+2. [What is Redis?][WHAT_IS_REDIS_LINK]  
 
 [REDIS_SINGLE_THREADED_LINK]: https://medium.com/@aditimishra_541/why-is-redis-so-fast-despite-being-single-threaded-dc06ba33fc75
 [WHAT_IS_REDIS_LINK]: https://medium.com/@humberto521336/what-is-redis-94c1930bd3c3
