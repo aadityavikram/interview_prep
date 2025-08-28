@@ -300,7 +300,165 @@ But the Redis server connection wasn’t being restored when you used JedisConne
 7. No Deletion:  
   a. Elements cannot be reliably removed from a Bloom filter without potentially affecting the membership status of other elements, as removing a bit might incorrectly indicate the absence of another element that also hashed to that bit.  
 
-# 5. Links to Read
+<br />
+<br />
+<br />
+
+
+
+
+# 5. How to setup Redis in a distributed environment?
+
+1. Single Redis Server (Baseline)  
+  a. Easiest setup → one Redis server (or container).  
+  b. All pods connect to the same Redis instance.  
+
+```java
+spring:
+  data:
+    redis:
+      host: redis-service   # K8s service for Redis
+      port: 6379
+```
+
+2. Problems in distributed env:  
+  a. Single point of failure.  
+  b. Memory limited to one machine.  
+  c. No scaling beyond one node.  
+
+3. Redis with Replication (Leader–Follower)  
+  a. One master (accepts writes), multiple replicas (read-only).  
+  b. Follower auto-syncs from master.  
+  - c. Pods can:  
+    - 1. Send writes → master  
+    - 2. Send reads → followers (manually or via proxy)  
+  d. High availability (if master dies, a replica can take over manually).  
+  e. Failover is manual unless you add Sentinel.  
+
+4. Redis Sentinel (High Availability)  
+  a. Sentinel = monitoring + auto-failover layer.  
+  b. Deployed alongside master + replicas.  
+  - c. If master goes down:  
+    - 1. Sentinel elects a new master.  
+    - 2. Clients auto-discover new master.  
+  d. Topology:  
+
+```java
+           ┌─────────┐
+  Writes → │ Master  │
+           └─────────┘
+             /     \
+            /       \
+       ┌───────┐ ┌───────┐
+       │Replica│ │Replica│
+       └───────┘ └───────┘
+          ↑           ↑
+          |           |
+      ┌───────────────┐
+      │  Sentinels    │
+      └───────────────┘
+```
+
+Spring Boot config for Sentinel:
+
+```java
+spring:
+  data:
+    redis:
+      sentinel:
+        master: mymaster
+        nodes:
+          - redis-sentinel-0:26379
+          - redis-sentinel-1:26379
+          - redis-sentinel-2:26379
+```
+
+Provides automatic failover.  
+Still a single master (no write scaling).  
+
+5. Redis Cluster (Sharding + HA)  
+  a. Data is sharded across multiple masters.  
+  b. Each master has replicas.  
+  c. Cluster uses hash slots (0–16383) to distribute keys.  
+  d. Clients (like Lettuce, Redisson) understand cluster topology.  
+  e. Topology:  
+
+```java
+ Master1(0-5460)  Master2(5461-10922)  Master3(10923-16383)
+    | Replica1       | Replica2            | Replica3
+```
+
+Spring Boot config for Cluster:
+```java
+spring:
+  data:
+    redis:
+      cluster:
+        nodes:
+          - redis-cluster-0:6379
+          - redis-cluster-1:6379
+          - redis-cluster-2:6379
+```
+
+True distributed Redis (scales horizontally).  
+Automatic failover (replicas promoted).  
+Higher throughput (multiple masters).  
+More operational complexity.  
+Multi-key ops limited to same hash slot.  
+
+6. Redis Enterprise / Managed Services  
+  - a. If you don’t want to manage Sentinel/Cluster yourself:  
+    - 1. Redis Enterprise (official commercial solution).  
+    - 2. AWS ElastiCache (Redis).  
+    - 3. Azure Cache for Redis.  
+    - 4. GCP Memorystore.  
+  b. Automatic scaling, HA, backups.  
+  c. Costs more, vendor lock-in.  
+
+7. In Kubernetes  
+  - a. If you’re deploying on K8s:  
+    - 1. Use Helm charts or Operators:  
+      - a. Bitnami Redis Helm Chart  
+      - b. Redis Operator  
+      - c. Example (Redis Cluster via Bitnami):  
+```java
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install redis-cluster bitnami/redis-cluster --set cluster.nodes=6
+```
+
+8. This deploys:  
+  a. Multiple masters (clustered)  
+  b. Replicas  
+  c. Sentinel (optional)  
+  d. Your Spring Boot apps just connect using the service DNS name.  
+
+9. Best Practices for Distributed Environments  
+  a. Use Lettuce (not Jedis) → auto-reconnect, cluster-aware, Sentinel-aware.  
+  b. Externalize config → Use K8s ConfigMap/Secret for host/port/password.  
+  c. Enable TLS + AUTH for multi-tenant / internet-facing Redis.  
+  d. Use @Cacheable with RedisCacheManager for cache layer (don’t reinvent).  
+  e. For distributed locks / rate-limiting → use Redisson (handles cluster correctly).  
+  - f. Capacity planning:  
+    - 1. Size memory for peak load.  
+    - 2. Use eviction policies (allkeys-lru) if using as cache.  
+  g. Monitor Redis with Prometheus + Grafana (exporter available).
+
+10. Summary  
+  a. Small team / simple setup → Single Redis + persistence.  
+  b. Need HA → Redis + Sentinel.  
+  c. Need HA + scalability → Redis Cluster.  
+  d. Don’t want ops hassle → Redis Enterprise / Cloud provider.  
+  e. K8s → Use Helm chart / Operator.  
+
+<br />
+<br />
+<br />
+
+
+
+
+
+# 6. Links to Read
 
 1. [Why is Redis So Fast Despite Being Single-Threaded?][REDIS_SINGLE_THREADED_LINK]  
 2. [What is Redis?][WHAT_IS_REDIS_LINK]  
