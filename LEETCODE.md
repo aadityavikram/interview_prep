@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|223| Find Positive Integer Solution for a Given Equation | https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/description/ | Medium | https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/solutions/7143698/java-o-n-log-n-solution/ |
 |222| Pancake Sorting | https://leetcode.com/problems/pancake-sorting/description/ | Medium | https://leetcode.com/problems/pancake-sorting/solutions/7143604/java-o-n-2-solution/ |
 |221| Minimum Adjacent Swaps to Reach the Kth Smallest Number | https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/description/ | Medium | https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/solutions/7127483/java-o-k-n-n-2-solution/ |
 |220| Next Permutation | https://leetcode.com/problems/next-permutation/description/ | Medium | https://leetcode.com/problems/next-permutation/solutions/7127112/java-o-n-solution/ |
