@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|224| Divide Players Into Teams of Equal Skill | https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/description/ | Medium | https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/solutions/7192161/java-o-n-log-n-solution/ |
 |223| Find Positive Integer Solution for a Given Equation | https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/description/ | Medium | https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/solutions/7143698/java-o-n-log-n-solution/ |
 |222| Pancake Sorting | https://leetcode.com/problems/pancake-sorting/description/ | Medium | https://leetcode.com/problems/pancake-sorting/solutions/7143604/java-o-n-2-solution/ |
 |221| Minimum Adjacent Swaps to Reach the Kth Smallest Number | https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/description/ | Medium | https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/solutions/7127483/java-o-k-n-n-2-solution/ |
