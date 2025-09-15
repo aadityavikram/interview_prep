@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|225| Swapping Nodes in a Linked List | https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/ | Medium | https://leetcode.com/problems/swapping-nodes-in-a-linked-list/solutions/7192212/java-o-n-solution/ |
 |224| Divide Players Into Teams of Equal Skill | https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/description/ | Medium | https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/solutions/7192161/java-o-n-log-n-solution/ |
 |223| Find Positive Integer Solution for a Given Equation | https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/description/ | Medium | https://leetcode.com/problems/find-positive-integer-solution-for-a-given-equation/solutions/7143698/java-o-n-log-n-solution/ |
 |222| Pancake Sorting | https://leetcode.com/problems/pancake-sorting/description/ | Medium | https://leetcode.com/problems/pancake-sorting/solutions/7143604/java-o-n-2-solution/ |
