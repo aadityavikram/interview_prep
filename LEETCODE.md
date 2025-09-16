@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|228| K-th Smallest Prime Fraction | https://leetcode.com/problems/k-th-smallest-prime-fraction/description/ | Medium | https://leetcode.com/problems/k-th-smallest-prime-fraction/solutions/7195366/java-o-n-log-n-solution/ |
 |227| Maximum Score of a Good Subarray | https://leetcode.com/problems/maximum-score-of-a-good-subarray/description/ | Hard | https://leetcode.com/problems/maximum-score-of-a-good-subarray/solutions/7192428/java-o-n-solution/ |
 |226| Make String a Subsequence Using Cyclic Increments | https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/description/ | Medium | https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/solutions/7192356/java-o-n-solution/ |
 |225| Swapping Nodes in a Linked List | https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/ | Medium | https://leetcode.com/problems/swapping-nodes-in-a-linked-list/solutions/7192212/java-o-n-solution/ |
