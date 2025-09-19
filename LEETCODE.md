@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|231| Construct Smallest Number From DI String | https://leetcode.com/problems/construct-smallest-number-from-di-string/description/ | Medium | https://leetcode.com/problems/construct-smallest-number-from-di-string/solutions/7205663/java-o-n-solution/ |
 |230| LFU Cache | https://leetcode.com/problems/lfu-cache/description/ | Hard | https://leetcode.com/problems/lfu-cache/solutions/7205055/java-o-1-solution/ |
 |229| Camelcase Matching | https://leetcode.com/problems/camelcase-matching/description/ | Medium | https://leetcode.com/problems/camelcase-matching/solutions/7195437/java-o-n-l-solution/ |
 |228| K-th Smallest Prime Fraction | https://leetcode.com/problems/k-th-smallest-prime-fraction/description/ | Medium | https://leetcode.com/problems/k-th-smallest-prime-fraction/solutions/7195366/java-o-n-log-n-solution/ |
