@@ -1,6 +1,7 @@
 # My solutions to Leetcode questions
 | No. | Problem Name | Problem Link | Difficulty | Solution Link |
 |-----|--------------|--------------|------------|---------------|
+|233| Divide Array Into Arrays With Max Difference | https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/description/ | Medium | https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/solutions/7220143/java-o-n-log-n-solution/ |
 |232| Optimal Partition of String | https://leetcode.com/problems/optimal-partition-of-string/description/ | Medium | https://leetcode.com/problems/optimal-partition-of-string/solutions/7220090/java-o-n-solution/ |
 |231| Construct Smallest Number From DI String | https://leetcode.com/problems/construct-smallest-number-from-di-string/description/ | Medium | https://leetcode.com/problems/construct-smallest-number-from-di-string/solutions/7205663/java-o-n-solution/ |
 |230| LFU Cache | https://leetcode.com/problems/lfu-cache/description/ | Hard | https://leetcode.com/problems/lfu-cache/solutions/7205055/java-o-1-solution/ |
